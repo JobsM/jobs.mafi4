@@ -120,8 +120,8 @@ body {
 
 .hero-subtitle {
     font-size: 24px;
-    font-weight: 400;
-    color: #86868b;
+    font-weight: 500;
+    color: #b4b4b4;
     margin-bottom: 30px;
 }
 
@@ -251,4 +251,5 @@ body {
 
 .btn-whatsapp:hover {
     background-color: #128C7E;
+
 }
