@@ -60,11 +60,34 @@
 
                 <article class="card-produto">
                     <div class="img-container">
-                        <img src="./img/17pro.jpg" alt="iPhone 17 Pro Max">
+                        <img src="./img/17pro.png" alt="iPhone 17 Pro Max" id="img-17promax">
                     </div>
+                    
                     <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 17 Pro Max</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Pro Max!" target="_blank" class="btn-whatsapp">
+                        <h3 class="titulo-produto" id="titulo-17promax">iPhone 17 Pro Max</h3>
+                        
+                        <div class="selector-cores">
+                            <p style="font-size: 12px; color: #666; margin-bottom: 5px;">Escolha a cor:</p>
+                            <div class="cores-container" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                
+                                <button class="btn-cor" style="background-color: #ff9f0a;" 
+                                    onclick="mudarCor(this, './img/17pro.png', 'iPhone 17 Pro Max Laranja')">
+                                </button>
+
+                                <button class="btn-cor" style="background-color: #004080;" 
+                                    onclick="mudarCor(this, './img/17pro-blue.png', 'iPhone 17 Pro Max Azul Intenso')">
+                                </button>
+
+                                <button class="btn-cor" style="background-color: #ececec;" 
+                                    onclick="mudarCor(this, './img/17pro-silver.png', 'iPhone 17 Pro Max Silver')">
+                                </button>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Pro Max Laranja!" 
+                           target="_blank" 
+                           class="btn-whatsapp"
+                           id="zap-17promax">
                             Comprar 📲
                         </a>
                     </div>
@@ -357,7 +380,17 @@
                         </a>
                     </div>
                 </article>
-
+                <article class="card-produto">
+                    <div class="img-container">
+                        <img src="./img/ipadprom2.png" alt="iPad Pro M2">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Pro M2</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M2!" target="_blank" class="btn-whatsapp">
+                            Comprar 📲
+                        </a>
+                    </div>
+                </article>
                 <article class="card-produto">
                     <div class="img-container">
                         <img src="./img/macbookair.png" alt="MacBook Air">
@@ -401,4 +434,3 @@
 </body>
 
 </html>
-
