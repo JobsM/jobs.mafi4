@@ -168,6 +168,21 @@ body {
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
+/* --- ESTILO DOS BOTÕES DE COR --- */
+.btn-cor {
+    width: 25px;     /* Tamanho da bolinha */
+    height: 25px;
+    border-radius: 50%; /* Faz ficar redondo */
+    border: 1px solid #ccc; /* Borda fininha */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-cor:hover {
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+    border: 1px solid #000;
+}
+
 
 /* --- 4. VITRINE DE PRODUTOS --- */
 .section-produtos {
@@ -207,7 +222,7 @@ body {
 }
 
 .card-produto img {
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .img-container {
@@ -250,6 +265,5 @@ body {
 }
 
 .btn-whatsapp:hover {
-    background-color: #128C7E;
-
+    background-color: #0e757c;
 }
