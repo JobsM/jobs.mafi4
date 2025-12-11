@@ -20,3 +20,21 @@
                 }
             });
         });
+
+        function mudarCor(elemento, novaImagem, novoNome) {
+    // 1. Acha o card onde você clicou
+    const card = elemento.closest('.card-produto');
+    
+    // 2. Troca a foto
+    const img = card.querySelector('.img-container img');
+    img.src = novaImagem;
+    
+    // 3. Troca o título
+    const titulo = card.querySelector('.titulo-produto');
+    titulo.innerText = novoNome;
+    
+    // 4. Troca o link do WhatsApp para já ir com a cor certa
+    const linkZap = card.querySelector('.btn-whatsapp');
+    const textoZap = encodeURIComponent(`Tenho interesse no ${novoNome}!`);
+    linkZap.href = `https://wa.me/5548984023936?text=${textoZap}`;
+}
