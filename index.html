@@ -30,10 +30,24 @@
         </div>
 
         <nav class="header-bottom">
-            <a href="#">Categorias</a>
-            <a href="#">Lançamentos</a>
-            <a href="#">Contato</a>
-        </nav>
+    
+    <div class="dropdown-menu">
+        <a href="#" class="btn-categoria">Categorias ▾</a>
+        <div class="dropdown-content">
+            <button onclick="filtrarProdutos('todos')">Ver Tudo</button>
+            <button onclick="filtrarProdutos('iphone')">iPhone</button>
+            <button onclick="filtrarProdutos('mac')">Mac (iMac & MacBook)</button>
+            <button onclick="filtrarProdutos('ipad')">iPad</button>
+            <button onclick="filtrarProdutos('watch')">Apple Watch</button>
+            <button onclick="filtrarProdutos('airpods')">AirPods</button>
+        </div>
+    </div>
+
+    <a href="#vitrine" onclick="filtrarProdutos('lancamento')">Lançamentos</a>
+
+    <a href="https://wa.me/5548984023936" target="_blank">Contato</a>
+
+</nav>
     </header>
 
     <main>
@@ -53,380 +67,329 @@
             </div>
         </section>
 
-        <section id="vitrine" class="section-produtos">
+       <section id="vitrine" class="section-produtos">
             <h2 class="titulo-vitrine">Escolha seu modelo</h2>
-
+            
             <div class="grade-produtos">
 
-                <article class="card-produto">
+                <article class="card-produto" data-categoria="iphone lancamento">
+                    <span class="selo-popular">🔥 Mais Vendido</span>
                     <div class="img-container">
-                        <img src="./img/17pro.png" alt="iPhone 17 Pro Max" id="img-17promax">
+                        <img src="./img/17pro.png" alt="iPhone 17 Pro Max">
                     </div>
-                    
                     <div class="info-container">
-                        <h3 class="titulo-produto" id="titulo-17promax">iPhone 17 Pro Max</h3>
-                        
+                        <h3 class="titulo-produto">iPhone 17 Pro Max</h3>
                         <div class="selector-cores">
                             <p style="font-size: 12px; color: #666; margin-bottom: 5px;">Escolha a cor:</p>
                             <div class="cores-container" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <button class="btn-cor" style="background-color: #ff9f0a;" onclick="mudarCor(this, './img/17pro.png', 'iPhone 17 Pro Max Laranja')"></button>
+                                <button class="btn-cor" style="background-color: #004080;" onclick="mudarCor(this, './img/17pro-blue.png', 'iPhone 17 Pro Max Azul Intenso')"></button>
+                                <button class="btn-cor" style="background-color: #ececec;" onclick="mudarCor(this, './img/17pro-silver.png', 'iPhone 17 Pro Max Silver')"></button>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Pro Max Laranja!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone lancamento">
+                    <span class="selo-novo">🌠 Novo</span>
+
+                    <div class="img-container">
+                        <img src="./img/17sev.png" alt="iPhone 17" id="img-17sev">
+                    </div>
+                    
+                    <div class="info-container">
+                        <h3 class="titulo-produto" id="titulo-17sev">iPhone 17 Lavanda</h3>
+                        
+                        <div class="selector-cores">
+                            <p style="font-size: 12px; color: #666; margin-bottom: 5px;">Escolha a cor:</p>
+                            
+                            <div class="cores-container" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap;">
                                 
-                                <button class="btn-cor" style="background-color: #ff9f0a;" 
-                                    onclick="mudarCor(this, './img/17pro.png', 'iPhone 17 Pro Max Laranja')">
+                                <button class="btn-cor" style="background-color: #d8c3e6;" 
+                                    onclick="mudarCor(this, './img/17lavanda.png', 'iPhone 17 Lavanda')">
                                 </button>
 
-                                <button class="btn-cor" style="background-color: #004080;" 
-                                    onclick="mudarCor(this, './img/17pro-blue.png', 'iPhone 17 Pro Max Azul Intenso')">
+                                <button class="btn-cor" style="background-color: #9ba691;" 
+                                    onclick="mudarCor(this, './img/17salvia.png', 'iPhone 17 Sálvia')">
                                 </button>
 
-                                <button class="btn-cor" style="background-color: #ececec;" 
-                                    onclick="mudarCor(this, './img/17pro-silver.png', 'iPhone 17 Pro Max Silver')">
+                                <button class="btn-cor" style="background-color: #a5b3ce;" 
+                                    onclick="mudarCor(this, './img/17azul.png', 'iPhone 17 Azul-névoa')">
                                 </button>
+
+                                <button class="btn-cor" style="background-color: #f2f2f2;" 
+                                    onclick="mudarCor(this, './img/17branco.png', 'iPhone 17 Branco')">
+                                </button>
+
+                               
+
+                                <button class="btn-cor" style="background-color: #1d1d1f;" 
+                                    onclick="mudarCor(this, './img/17preto.png', 'iPhone 17 Preto')">
+                                </button>
+
                             </div>
                         </div>
 
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Pro Max Laranja!" 
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Lavanda!" 
                            target="_blank" 
-                           class="btn-whatsapp"
-                           id="zap-17promax">
-                            Comprar 📲
+                           class="btn-whatsapp" 
+                           id="zap-17sev">
+                           Comprar 📲
                         </a>
                     </div>
                 </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/17sev.png" alt="iPhone 17">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 17 </h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/ps5.png" alt="PlayStation 5">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">PlayStation 5 Slim</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no PS5!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/macbookpro.png" alt="MacBook Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">MacBook Pro M3</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/17air.png" alt="iPhone 17 Air">
-                    </div>
+                <article class="card-produto" data-categoria="iphone lancamento">
+                    <span class="selo-novo">⭐ Novo</span>
+                    <div class="img-container"><img src="./img/17air.png" alt="iPhone 17 Air"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 17 Air</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Air!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Air!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/16pro.png" alt="iPhone 16 Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 16 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/16sev.png" alt="iPhone 16 Plus ou 16">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 16 Plus </h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Plus!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/ipadprom4.png" alt="iPad Pro M4">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPad Pro M4</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/15prosev.png" alt="iPhone 15 Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 15 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/15normal.png" alt="iPhone 15">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 15 </h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/14pro.png" alt="iPhone 14 Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 14 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/13prosev.png" alt="iPhone 13 Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 13 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/16promaxsev.png" alt="iPhone 16 Pro Max">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 16 Pro Max</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro Max!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/16e.png" alt="iPhone 16e">
-                    </div>
+                <article class="card-produto" data-categoria="iphone lancamento">
+                    <span class="selo-novo">⭐ Novo</span>
+                    <div class="img-container"><img src="./img/16e.png" alt="iPhone 16e"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 16e</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16e!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16e!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/14sev.png" alt="iPhone 14">
-                    </div>
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/16pro.png" alt="iPhone 16 Pro"></div>
                     <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 14 </h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <h3 class="titulo-produto">iPhone 16 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/13promax.png" alt="iPhone 13 Pro Max">
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/16sev.png" alt="iPhone 16 Plus"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16 Plus</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Plus!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/16promaxsev.png" alt="iPhone 16 Pro Max"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16 Pro Max</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro Max!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/15prosev.png" alt="iPhone 15 Pro"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 15 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/15normal.png" alt="iPhone 15"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 15</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/14pro.png" alt="iPhone 14 Pro"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 14 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/14sev.png" alt="iPhone 14"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 14</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/13promax.png" alt="iPhone 13 Pro Max"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 13 Pro Max</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro Max!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro Max!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/13.png" alt="iPhone 13">
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/13prosev.png" alt="iPhone 13 Pro"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 13 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/13.png" alt="iPhone 13"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 13</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/12.png" alt="iPhone 12">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 12</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/12pro.png" alt="iPhone 12 Pro">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 12 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/12promax.png" alt="iPhone 12 Pro Max">
-                    </div>
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/12promax.png" alt="iPhone 12 Pro Max"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 12 Pro Max</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro Max!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro Max!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/11.png" alt="iPhone 11">
-                    </div>
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/12pro.png" alt="iPhone 12 Pro"></div>
                     <div class="info-container">
-                        <h3 class="titulo-produto">iPhone 11</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <h3 class="titulo-produto">iPhone 12 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/11prosev.png" alt="iPhone 11 Pro">
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/12.png" alt="iPhone 12"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 12</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
+                </article>
+
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/11prosev.png" alt="iPhone 11 Pro"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 11 Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11 Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/airpodspro3.png" alt="AirPods Pro 3">
-                    </div>
+                <article class="card-produto" data-categoria="iphone">
+                    <div class="img-container"><img src="./img/11.png" alt="iPhone 11"></div>
                     <div class="info-container">
-                        <h3 class="titulo-produto">AirPods Pro 3</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods Pro 3!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <h3 class="titulo-produto">iPhone 11</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/airpods4.png" alt="AirPods 4">
-                    </div>
+                <article class="card-produto" data-categoria="mac">
+                    <div class="img-container"><img src="./img/macbookpro.png" alt="MacBook Pro"></div>
                     <div class="info-container">
-                        <h3 class="titulo-produto">AirPods 4</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods 4!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <h3 class="titulo-produto">MacBook Pro M3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/ipadair.png" alt="iPad Air">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPad Air</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Air!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/ipadprom2.png" alt="iPad Pro M2">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iPad Pro M2</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M2!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/macbookair.png" alt="MacBook Air">
-                    </div>
+                <article class="card-produto" data-categoria="mac">
+                    <div class="img-container"><img src="./img/macbookair.png" alt="MacBook Air"></div>
                     <div class="info-container">
                         <h3 class="titulo-produto">MacBook Air</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook Air!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/imacpro.png" alt="iMac">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">iMac Pro</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iMac Pro!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
-                    </div>
-                </article>
-                <article class="card-produto">
-                    <div class="img-container">
-                        <img src="./img/imac.png" alt="IMac">
-                    </div>
-                    <div class="info-container">
-                        <h3 class="titulo-produto">IMac</h3>
-                        <a href="https://wa.me/5548984023936?text=Tenho interesse no IMac!" target="_blank" class="btn-whatsapp">
-                            Comprar 📲
-                        </a>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook Air!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
-            </div>
-        </section>
+                <article class="card-produto" data-categoria="mac">
+                    <div class="img-container"><img src="./img/imacpro.png" alt="iMac Pro"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iMac Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iMac Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="mac">
+                    <div class="img-container"><img src="./img/imac.png" alt="IMac"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iMac 24"</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iMac!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="ipad lancamento">
+                    <div class="img-container"><img src="./img/ipadprom4.png" alt="iPad Pro M4"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Pro M4</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M4!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="ipad">
+                    <div class="img-container"><img src="./img/ipadprom2.png" alt="iPad Pro M2"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Pro M2</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M2!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="ipad">
+                    <div class="img-container"><img src="./img/ipadair.png" alt="iPad Air"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Air</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Air!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="watch lancamento">
+                    <div class="img-container"><img src="./img/applewatchultra3.png" alt="Apple Watch Ultra 3"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Ultra 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Ultra 3!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="watch lancamento">
+                    <div class="img-container"><img src="./img/applewatchseries11.png" alt="Apple Watch Series 11"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Series 11</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Series 11!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="watch">
+                    <div class="img-container"><img src="./img/applewatchultra.png" alt="Apple Watch Ultra"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Ultra</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Ultra!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="watch">
+                    <div class="img-container"><img src="./img/applewatchSE3.png" alt="Apple Watch SE 3"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch SE 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch SE 3!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="airpods lancamento">
+                    <div class="img-container"><img src="./img/airpodspro3.png" alt="AirPods Pro 3"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">AirPods Pro 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods Pro 3!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="airpods lancamento">
+                    <div class="img-container"><img src="./img/airpods4.png" alt="AirPods 4"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">AirPods 4</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods 4!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="game">
+                    <div class="img-container"><img src="./img/ps5.png" alt="PlayStation 5"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">PlayStation 5 Slim</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no PS5!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+            </div> </section>
 
     </main>
 
