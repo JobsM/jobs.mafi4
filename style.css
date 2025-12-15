@@ -45,6 +45,60 @@ body {
     white-space: nowrap;
 }
 
+/* --- MENU DROPDOWN (Estilo iPlace/Apple) --- */
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.btn-categoria {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    background-color: #ffffff; /* Fundo branco */
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 12px;
+    top: 31px;
+    left: -20px;
+    padding: 10px 0;
+}
+
+/* Botões dentro do menu */
+.dropdown-content button {
+    color: #1d1d1f;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.dropdown-content button:hover {
+    background-color: #f5f5f7; /* Cinza claro ao passar o mouse */
+    color: #0071e3; /* Azul Apple */
+}
+
+/* A mágica: Mostrar ao passar o mouse */
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
 /* Barra de Busca */
 .search-box {
     display: flex;
@@ -208,6 +262,7 @@ body {
 
 /* O CARD LIMPO */
 .card-produto {
+    position: relative;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -223,6 +278,37 @@ body {
 
 .card-produto img {
     border-radius: 4px;
+}
+
+.selo-popular {
+    position: absolute; /* Flutua por cima de tudo */
+    top: 15px;          /* Distância do topo */
+    left: 15px;         /* Distância da esquerda */
+    background-color: #ff3b30; /* Vermelho "Hot" da Apple */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px; /* Formato de pílula */
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 0.5px;
+    z-index: 10;        /* Garante que fique em cima da foto */
+    box-shadow: 0 2px 8px rgba(255, 59, 48, 0.3); /* Sombra suave vermelha */
+}
+
+/* Opção 2: Selo Azul para "Novo" */
+.selo-novo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #0071e3; /* Azul Apple */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
 }
 
 .img-container {
