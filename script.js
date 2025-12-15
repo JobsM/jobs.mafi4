@@ -1,4 +1,4 @@
-/ =========================================
+// =========================================
 // 1. SISTEMA DE BUSCA (DIGITAR)
 // =========================================
 const barraDePesquisa = document.getElementById('input-busca');
@@ -72,3 +72,4 @@ function mudarCor(elemento, novaImagem, novoNome) {
     const textoZap = encodeURIComponent(`Tenho interesse no ${novoNome}!`);
     linkZap.href = `https://wa.me/5548984023936?text=${textoZap}`;
 }
+
