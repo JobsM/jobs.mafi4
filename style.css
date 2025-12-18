@@ -434,6 +434,20 @@ body {
     z-index: 10;
 }
 
+.selo-destaque {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(to right, #f3c57a, #dfa54e); /* Degradê dourado */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 710;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
 .img-container {
     height: 240px;
     display: flex;
@@ -476,3 +490,4 @@ body {
 .btn-whatsapp:hover {
     background-color: #0e757c;
 }
+
