@@ -30,41 +30,60 @@
         </div>
 
         <nav class="header-bottom">
-    
-    <div class="dropdown-menu">
-        <a href="#" class="btn-categoria">Categorias ▾</a>
-        <div class="dropdown-content">
-            <button onclick="filtrarProdutos('todos')">Ver Tudo</button>
-            <button onclick="filtrarProdutos('iphone')">iPhone</button>
-            <button onclick="filtrarProdutos('mac')">Mac (iMac & MacBook)</button>
-            <button onclick="filtrarProdutos('ipad')">iPad</button>
-            <button onclick="filtrarProdutos('watch')">Apple Watch</button>
-            <button onclick="filtrarProdutos('airpods')">AirPods</button>
-        </div>
-    </div>
-
-    <a href="#vitrine" onclick="filtrarProdutos('lancamento')">Lançamentos</a>
-
-    <a href="https://wa.me/5548984023936" target="_blank">Contato</a>
-
-</nav>
+            <div class="dropdown-menu">
+                <a href="#" class="btn-categoria">Categorias ▾</a>
+                <div class="dropdown-content">
+                    <button onclick="filtrarProdutos('todos')">Ver Tudo</button>
+                    <button onclick="filtrarProdutos('iphone')">iPhone</button>
+                    <button onclick="filtrarProdutos('mac')">Mac</button>
+                    <button onclick="filtrarProdutos('ipad')">iPad</button>
+                    <button onclick="filtrarProdutos('watch')">Apple Watch</button>
+                    <button onclick="filtrarProdutos('airpods')">AirPods</button>
+                    <button onclick="filtrarProdutos('bike')">Bikes Elétricas</button>
+                    <button onclick="filtrarProdutos('videogames')">Video Games</button>
+                </div>
+            </div>
+            <a href="#vitrine" onclick="filtrarProdutos('lancamento')">Lançamentos</a>
+            <a href="https://wa.me/5548984023936" target="_blank">Contato</a>
+        </nav>
     </header>
 
     <main>
 
-        <section class="apple-hero">
-            <div class="hero-content">
-                <h2 class="hero-title">iPhone 17 Pro.</h2>
-                <p class="hero-subtitle"> Pro em tudo.</p>
-                <div class="hero-buttons">
-                    <a href="#vitrine" class="btn-hero-primary">Comprar</a>
-                    <a href="#vitrine" class="btn-hero-secondary">Saiba mais ></a>
+        <section class="apple-hero-slider">
+            
+            <div class="mySlides fade">
+                <div class="hero-content">
+                    <h2 class="hero-title">iPhone 17 Pro.</h2>
+                    <p class="hero-subtitle">Pro em tudo.</p>
+                    <div class="hero-buttons">
+                        <a href="#vitrine" class="btn-hero-primary">Comprar</a>
+                        <a href="#vitrine" class="btn-hero-secondary">Saiba mais ></a>
+                    </div>
+                </div>
+                <div class="hero-image-box">
+                    <img src="./img/17probanner.png" alt="iPhone 17 Pro Laranja">
                 </div>
             </div>
 
-            <div class="hero-image-box">
-                <img src="./img/17probanner.png" alt="Câmeras iPhone 17 Pro Laranja">
+            <div class="mySlides fade">
+                <div class="hero-natal-container">
+                    <div class="hero-image-box" style="width: 100%; max-width: none; height: 880px;">
+                        <img src="./img/bikenatalbanner.png" alt="Natal da Inovação" class="banner-natal-full">
+                    </div>
+                    <div class="button-container-natal">
+                        <a href="https://wa.me/5548984023936?text=Quero garantir a ECO BIKE!" target="_blank" class="btn-hero-gold">
+                            🛒 Garanta a sua agora
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            <div style="text-align:center; position: absolute; bottom: 20px; width: 100%;">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+
         </section>
 
        <section id="vitrine" class="section-produtos">
@@ -162,6 +181,58 @@
                     <div class="info-container">
                         <h3 class="titulo-produto">iPhone 16 Pro</h3>
                         <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="bike lancamento">
+                    <span class="selo-popular">⚡ Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/ecobike.png" alt="Eco Bike Elétrica">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Eco Bike 🚲</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Eco Bike Mafia X!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="bike lancamento">
+                    <span class="selo-popular">⚡ Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/x50action.png" alt="Bicicleta Elétrica x50 Action">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bicicleta Elétrica x50 Action 🚲</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Bicicleta Elétrica x50 Action!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="bike lancamento">
+                    <span class="selo-popular">⚡ Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v9max.png" alt="Bike Elétrica v9 Max 1000W"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica v9 Max 1000W 🚲</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Bike Elétrica v9 Max 1000W!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+
+                <article class="card-produto" data-categoria="bike lancamento">
+                    <span class="selo-popular">⚡ Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v40pro.png" alt="Bike Elétrica v40 Pro 1000W"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica v40 Pro 1000W 🚲</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Bike Elétrica v40 Pro 1000W!" target="_blank" class="btn-whatsapp">Comprar 📲</a>
+                    </div>
+                </article>
+                    
+                <article class="card-produto" data-categoria="bike lancamento">
+                    <span class="selo-popular">⚡ Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v20.png" alt="Bike Elétrica V20"></div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V20</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Bike Elétrica !" target="_blank" class="btn-whatsapp">Comprar 📲</a>
                     </div>
                 </article>
 
