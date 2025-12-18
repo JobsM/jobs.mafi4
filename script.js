@@ -73,3 +73,38 @@ function mudarCor(elemento, novaImagem, novoNome) {
     linkZap.href = `https://wa.me/5548984023936?text=${textoZap}`;
 }
 
+// =========================================
+// 4. CARROSSEL ANIMADO (SLIDESHOW)
+// =========================================
+let slideIndex = 0;
+mostrarSlides();
+
+function mostrarSlides() {
+    let i;
+    // Pega todos os slides
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    // Esconde todos os slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    // Aumenta o índice (passa pro próximo)
+    slideIndex++;
+    
+    // Se passar do último, volta pro primeiro
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    // Remove a cor da bolinha ativa anterior
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Mostra o slide atual e acende a bolinha
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+
+    // Roda a função de novo daqui a 4 segundos (4000ms)
+    setTimeout(mostrarSlides, 5000); 
+}
