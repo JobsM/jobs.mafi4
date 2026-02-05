@@ -17,6 +17,8 @@ body {
     width: 100%;
     background-color: #000000;
     padding-bottom: 15px;
+    z-index: 999;
+    position: relative;
 }
 
 .header-top {
@@ -213,6 +215,70 @@ body {
     }
 }
 
+/* Força o slider a encostar no menu e ter fundo preto atrás das imagens */
+.apple-hero-slider {
+    background-color: #000000; /* Garante que se houver falha, o fundo seja preto */
+    margin-top: -2px; /* Puxa o slider para CIMA, cobrindo a linha branca */
+    padding-top: 0 !important;
+    position: relative;
+    z-index: 1; /* Garante que fique logo abaixo do menu */
+    display: block;
+    width: 100%;
+}
+
+/* --- CORREÇÃO DO BANNER PEQUENO --- */
+/* Classe específica para o slide do PayDay ocupar tudo */
+.banner-full-width {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.banner-full-width img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; /* Garante que não fique uma tripa fina no PC */
+    object-fit: cover; /* Cobre a área sem esticar/deformar */
+    display: block;
+}
+
+/* --- CORREÇÃO DE LARGURA TOTAL (PAYDAY) --- */
+
+/* Remove a trava de largura e centralização do container */
+.hero-image-box.full-width-mode {
+    width: 100% !important;
+    max-width: 100% !important; /* O segredo: remove o limite de 900px */
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* Força a imagem a esticar de ponta a ponta */
+.hero-image-box.full-width-mode img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; /* Mantém a proporção correta */
+    display: block !important;
+    object-fit: cover !important; /* Cobre todo o espaço */
+    border-radius: 0 !important; /* Remove arredondamento se houver */
+}
+
+
+/* Remove margens extras da main */
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Garante que as imagens não criem espaço em branco embaixo */
+.hero-image-box img, 
+.banner-carnaval-full {
+    display: block; /* Remove o comportamento de texto da imagem */
+    vertical-align: bottom;
+}
+
 /* --- 3. HERO SECTION (ESTILO APPLE) --- */
 .apple-hero {
     background-color: #000000;
@@ -303,17 +369,184 @@ body {
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-/* --- ESTILO DO CARROSSEL --- */
+/* --- BANNER DE CARNAVAL - VERSÃO MELHORADA --- */
+
+/* Container principal do slide do carnaval */
+.slide-carnaval {
+    background-color: #000; /* Fundo preto para combinar com a imagem */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 600px; /* Altura mínima adequada */
+}
+
+/* --- CORREÇÃO DA TRANSPARÊNCIA --- */
+.hero-image-box img {
+    width: 100%;
+    max-width: 900px; /* Mantém limite apenas para os iPhones, o banner usa outra classe */
+    height: auto;
+    
+    /* REMOVI AS LINHAS DE MASK-IMAGE QUE CAUSAVAM O FADE */
+    border-radius: 0; /* Garante cantos retos se preferir */
+}
+
+/* --- AJUSTES FINAIS DE RESPONSIVIDADE --- */
+
+/* Regra específica para o banner FULL WIDTH (PayDay) */
+.hero-image-box.full-width-mode img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    
+    /* No computador, altura automática ou fixa */
+    min-height: 400px; 
+    object-fit: cover !important; /* Cobre o espaço sem distorcer */
+    
+    /* REMOÇÃO TOTAL DA MÁSCARA/FADE AQUI TAMBÉM POR GARANTIA */
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+/* --- VERSÃO MOBILE (CELULAR) --- */
+@media (max-width: 768px) {
+    
+    /* Aumenta a altura mínima no celular para o banner ter destaque */
+    .hero-image-box.full-width-mode img {
+        min-height: 250px; /* Altura mínima garantida no celular */
+        object-fit: cover; /* Garante que preencha tudo */
+        object-position: center; /* Centraliza a imagem (rosto do Steve Jobs) */
+    }
+
+    /* Ajuste para o texto não ficar colado ou sumir */
+    .hero-content {
+        padding-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 36px; /* Texto menor no celular */
+    }
+}
+
+/* Ajuste para a imagem do carnaval */
+.slide-carnaval .hero-image-box {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza a imagem */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Imagem do carnaval ajustada - SEM CORTES */
+.slide-carnaval .banner-carnaval-full {
+    width: 100%;
+    max-width: 1400px; /* Limite máximo para não esticar demais */
+    height: auto; /* Mantém proporção original */
+    display: block;
+    object-fit: contain; /* MOSTRA A IMAGEM COMPLETA, SEM CORTAR */
+    margin: 0 auto;
+}
+
+/* Container do botão - POSICIONADO FORA DA IMAGEM */
+.slide-carnaval .button-container-carnaval {
+    margin-top: 20px; /* ESPAÇO ABAIXO DA IMAGEM */
+    margin-bottom: 60px;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Ajuste para o botão dourado */
+.slide-carnaval .btn-hero-gold {
+    background: linear-gradient(to bottom, #f3c57a 0%, #dfa54e 100%);
+    color: #3e2b14;
+    padding: 16px 40px;
+    border-radius: 980px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid #f8dca8;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.slide-carnaval .btn-hero-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(223, 165, 78, 0.7);
+    background: linear-gradient(to bottom, #ffe2b3 0%, #eac276 100%);
+    color: #000;
+}
+
+
+
+/* Garantir que o slider não tenha padding extra */
 .apple-hero-slider {
     position: relative;
     max-width: 100%;
     margin: auto;
-    background-color: #000; /* Fundo preto */
-    padding-top: 60px;
-    overflow: hidden; /* Esconde o que sai da tela */
-    min-height: 600px; /* Altura mínima para não pular */
+    background-color: #000;
+    padding-top: 0; /* SEM PADDING TOP */
+    overflow: visible; /* Permite que o conteúdo seja visto */
+    min-height: auto;
 }
 
+/* Ajuste específico para o slide do carnaval */
+#slide-carnaval .mySlides {
+    background-color: #000; /* Fundo preto para combinar */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+    .slide-carnaval .banner-carnaval-full {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-carnaval {
+        min-height: 500px;
+    }
+    
+    .slide-carnaval .banner-carnaval-full {
+        width: 100%;
+        height: auto;
+    }
+    
+    .slide-carnaval .button-container-carnaval {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .slide-carnaval .btn-hero-gold {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-carnaval {
+        min-height: 400px;
+    }
+    
+    .slide-carnaval .button-container-carnaval {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .slide-carnaval .btn-hero-gold {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
 /* Esconde os slides por padrão (o JS vai mostrar um por vez) */
 .mySlides {
     display: none;
@@ -519,6 +752,9 @@ body {
 .btn-whatsapp:hover {
     background-color: #0e757c;
 }
+
+
+
 
 
 
