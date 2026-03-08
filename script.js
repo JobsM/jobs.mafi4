@@ -28,15 +28,11 @@ function filtrarProdutos(categoriaDesejada) {
     if (barraDePesquisa) barraDePesquisa.value = '';
 
     todosOsProdutos.forEach(produto => {
-        // Pega as etiquetas que você colocou no HTML (ex: "iphone lancamento")
         const categoriasDoProduto = produto.getAttribute('data-categoria');
 
         if (categoriaDesejada === 'todos') {
-            // Se clicou em "Ver Tudo", mostra tudo
             produto.style.display = "block";
         } else {
-            // Verifica se o produto tem a categoria clicada
-            // Ex: Se cliquei em 'mac', ele mostra tanto iMac quanto MacBook
             if (categoriasDoProduto && categoriasDoProduto.includes(categoriaDesejada)) {
                 produto.style.display = "block";
             } else {
@@ -56,7 +52,6 @@ function filtrarProdutos(categoriaDesejada) {
 // 3. SISTEMA DE MUDANÇA DE COR (IPHONE 17)
 // =========================================
 function mudarCor(elemento, novaImagem, novoNome) {
-    // Acha o card onde você clicou
     const card = elemento.closest('.card-produto');
     
     // Troca a foto
@@ -74,19 +69,17 @@ function mudarCor(elemento, novaImagem, novoNome) {
 }
 
 // =========================================
-// 4. CARROSSEL ANIMADO (SLIDESHOW)
+// 4. CARROSSEL ANIMADO (SLIDESHOW) - CORRIGIDO
 // =========================================
 let slideIndex = 0;
 mostrarSlides();
 
 function mostrarSlides() {
-    let i;
-    // Pega todos os slides
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
 
     // Esconde todos os slides
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
     }
 
@@ -97,14 +90,31 @@ function mostrarSlides() {
     if (slideIndex > slides.length) {slideIndex = 1}    
 
     // Remove a cor da bolinha ativa anterior
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
     // Mostra o slide atual e acende a bolinha
     slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+    
+    // Garante que as bolinhas correspondam aos slides
+    if (dots[slideIndex-1]) {
+        dots[slideIndex-1].className += " active";
+    }
 
-    // Roda a função de novo daqui a 4 segundos (4000ms)
-    setTimeout(mostrarSlides, 5000); 
+    // Roda a função de novo daqui a 4 segundos
+    setTimeout(mostrarSlides, 4000); 
 }
+
+// Mostrar primeiro slide ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (slides.length > 0) {
+        slides[0].style.display = "block";
+        if (dots.length > 0) {
+            dots[0].className += " active";
+        }
+    }
+});

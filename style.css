@@ -29,21 +29,73 @@ body {
     gap: 30px;
 }
 
+/* --- NOVOS LOGOS NO HEADER (STEVE JOBS & STEVE MOBILE) --- */
+/* --- NOVOS LOGOS NO HEADER (STEVE JOBS & STEVE MOBILE) - CORRIGIDO --- */
+
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 15px; 
+    height: 60px; /* Aumentei a altura geral para as logos terem mais espaço */
 }
 
-#logo {
-    height: 70px;
+/* O traço que divide as duas marcas */
+.logo-divisor {
+    color: #555555; 
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: -3px; /* Centraliza a barrinha com os textos */
 }
 
-.lg-title {
-    color: #ffffff;
-    font-size: 24px;
-    margin-left: 15px;
-    font-family: 'Orbitron', sans-serif;
-    white-space: nowrap;
+/* A moldura (esconde tudo que passar do tamanho dela) */
+.logo-wrapper {
+    height: 55px; /* Altura visível da moldura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Isso é o que corta as bordas brancas e a estrela */
+}
+
+/* 1. Steve Jobs Imports */
+.box-ste {
+    width: 160px; /* Largura da moldura */
+}
+.box-ste img {
+    width: 200px; /* A imagem é um pouco maior que a moldura (corta as laterais brancas) */
+    max-width: none !important;
+    height: auto;
+}
+
+/* 2. Steve Mobile */
+.box-mobile {
+    width: 180px; /* Largura da moldura */
+}
+.box-mobile img {
+    width: 240px; /* A imagem é maior que a moldura (o texto fica no meio, e a estrela embaixo é cortada) */
+    max-width: none !important;
+    height: auto;
+}
+
+/* --- AJUSTE PARA CABER PERFEITO NO CELULAR --- */
+@media (max-width: 768px) {
+    .logo-container { 
+        gap: 10px; 
+        height: 50px; 
+    }
+    
+    .logo-wrapper { 
+        height: 45px; 
+    }
+    
+    .logo-divisor { 
+        font-size: 22px; 
+    }
+    
+    .box-ste { width: 120px; }
+    .box-ste img { width: 150px; }
+    
+    .box-mobile { width: 135px; }
+    .box-mobile img { width: 180px; }
 }
 
 /* --- MENU DROPDOWN (Estilo iPlace/Apple) --- */
