@@ -162,6 +162,20 @@ body {
     overflow: hidden;
 }
 
+/* --- CORREÇÃO DA BARRA DE PESQUISA NO CELULAR --- */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column; /* Coloca a barra de pesquisa embaixo das logos */
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .search-box {
+        width: 100%; /* Força a barra a ocupar a tela toda */
+        max-width: 100%; 
+    }
+}
+
 .search-box input {
     width: 100%;
     padding: 12px 15px;
