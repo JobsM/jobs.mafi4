@@ -842,7 +842,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #25D366;
+    background: linear-gradient(to right, #02e245, #00bfa5); /* Degradê verde */
     color: white;
     text-decoration: none;
     padding: 14px 20px;
@@ -856,9 +856,3 @@ main {
 .btn-whatsapp:hover {
     background-color: #0e757c;
 }
-
-
-
-
-
-
