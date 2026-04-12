@@ -557,7 +557,7 @@ body {
 }
 
 /* SELOS */
-.selo-popular, .selo-novo, .selo-destaque, .selo-lancamento, .selo-ia {
+.selo-popular, .selo-novo, .selo-destaque, .selo-lancamento, .selo-ia, .selo-esgotado {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -571,6 +571,10 @@ body {
     color: white;
 }
 
+.selo-esgotado {
+    padding: 7px 13px;
+}
+
 .selo-popular:hover, .selo-novo:hover, .selo-destaque:hover {
     transform: scale(1.05);
 }
@@ -580,6 +584,7 @@ body {
 .selo-destaque { background: linear-gradient(135deg, #f3c57a, #dfa54e); }
 .selo-lancamento { background: linear-gradient(135deg, #00eeff, #aa04f7); }
 .selo-ia { background: linear-gradient(135deg, #000000, #0025fa); }
+.selo-esgotado { background: linear-gradient(135deg, #ff3300, #ff6b40); }
 
 /* =========================================
    AVALIAÇÕES

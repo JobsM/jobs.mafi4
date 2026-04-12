@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>E-Bikes Premium | JOBS MAFIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produto-style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos Exclusivos para a Página de Catálogo de Bikes */
+        .bikes-hero {
+            background: linear-gradient(135deg, #000000, #1a1a1c);
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            border-bottom: 5px solid #25D366;
+        }
+
+        .bikes-hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .bikes-hero p {
+            font-size: 18px;
+            color: #b4b4b4;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Usar a vitrine mas mais limpa */
+        .grade-bikes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+
+        /* Padronizando botão do card para acionar o WhatsApp Modal */
+        .btn-wpp-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #02e245, #00bfa5);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-wpp-card:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-detalhes {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <a href="index.html" class="logo-wrapper box-ste">
+                    <img src="./img/steve-jobs-logo.webp" alt="Steve Jobs Imports">
+                </a>
+                <span class="logo-divisor">|</span>
+                <a href="index.html" class="logo-wrapper box-mobile">
+                    <img src="./img/steve-mobile-logo.webp" alt="Steve Mobile">
+                </a>
+            </div>
+
+            <nav class="header-bottom" style="border: none; padding-top: 0;">
+                <a href="index.html" style="font-size: 15px; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px;">Voltar p/ Início</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bikes-hero">
+            <h1>Mobilidade Elétrica</h1>
+            <p>Descubra a liberdade de se locomover com estilo, potência e zero emissão de carbono.</p>
+        </section>
+
+        <!-- CATÁLOGO SÓ DE BIKES -->
+        <section class="grade-bikes">
+
+            <!-- x50 PRO (Leva pra pág do produto) -->
+            <article class="card-produto card-destaque" style="transform: none;">
+                <span class="selo-popular">⚡ A Mais Desejada</span>
+                <div class="img-container"><img src="./img/x50action.webp" alt="Bike Elétrica X50 PRO"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike Elétrica X50 PRO 🚲</h3>
+                    <a href="x50-pro.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
+                </div>
+            </article>
+
+            <!-- Eco Bike -->
+            <article class="card-produto">
+                <span class="selo-esgotado">Esgotado 🚫</span>
+                <div class="img-container"><img src="./img/ecobike.webp" alt="Eco Bike Elétrica"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Eco Bike 🚲</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('Eco Bike')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v9 Max -->
+            <article class="card-produto">
+                <span class="selo-destaque">🔥 Destaque</span>
+                <div class="img-container"><img src="./img/v9max.webp" alt="Bike Elétrica v9 Max 1000W"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike v9 Max 1000W 🚲</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('v9 Max 1000W')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v10 Max -->
+            <article class="card-produto">
+                <span class="selo-esgotado">Esgotado 🚫</span>
+                <div class="img-container"><img src="./img/v10max1000w.webp" alt="Bike Elétrica v10 Max 1000W"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike v10 Max 1000W 🚲</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('v10 Max 1000W')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v40 Pro -->
+            <article class="card-produto">
+                <span class="selo-popular">⚡ Lançamento</span>
+                <div class="img-container"><img src="./img/v40pro.webp" alt="Bike Elétrica v40 Pro 1000W"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike v40 Pro 1000W 🚲</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('v40 Pro 1000W')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v20 -->
+            <article class="card-produto">
+                <span class="selo-esgotado">Esgotado 🚫</span>
+                <div class="img-container"><img src="./img/v20.webp" alt="Bike Elétrica V20"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike Elétrica V20</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('V20')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v35 -->
+            <article class="card-produto">
+                <span class="selo-popular">⚡ Lançamento</span>
+                <div class="img-container"><img src="./img/v35.webp" alt="Bike Elétrica V35"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike Elétrica V35</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('V35')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+            <!-- v20 Mini -->
+            <article class="card-produto">
+                <span class="selo-popular">⚡ Lançamento</span>
+                <div class="img-container"><img src="./img/v20mini.webp" alt="Bike Elétrica V20 Mini"></div>
+                <div class="info-container">
+                    <h3 class="titulo-produto">Bike V20 Mini</h3>
+                    <button class="btn-wpp-card" onclick="abrirModalVendedor('V20 Mini')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL ESCOLHA DE VENDEDOR WHATSAPP -->
+    <div id="modalVendedor" class="modal-wpp">
+        <div class="modal-wpp-content">
+            <span class="close-wpp" onclick="fecharModalVendedor()">&times;</span>
+            <h3>Deseja falar com qual vendedor?</h3>
+            <p>Escolha um dos nossos especialistas para finalizar sua compra ou tirar dúvidas.</p>
+            
+            <div class="vendedores-opcoes">
+                <!-- VENDEDORA KEROLEN -->
+                <a id="linkKerolen" href="https://wa.me/5548988764683?text=Olá%20Kerolen,%20tenho%20interesse%20na%20Bike%20Elétrica%20V20%20Mini,%20gostaria%20de%20dúvidas/comprar!" target="_blank" class="vendedor-card">
+                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
+                    <div class="vendedor-info">
+                        <strong>Kerolen</strong>
+                        <span>Atendimento Especializado</span>
+                    </div>
+                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
+                </a>
+
+                <!-- VENDEDOR GUILHERME -->
+                <a id="linkGuilherme" href="https://wa.me/5548984023936?text=Olá%20Guilherme,%20tenho%20interesse%20na%20Bike%20Elétrica%20V20%20Mini,%20gostaria%20de%20dúvidas/comprar!" target="_blank" class="vendedor-card">
+                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
+                    <div class="vendedor-info">
+                        <strong>Guilherme</strong>
+                        <span>Atendimento Especializado</span>
+                    </div>
+                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>© 2026 Steve Jobs Imports - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal logic with dynamic product name for WhatsApp message
+        const modal = document.getElementById("modalVendedor");
+        const linkKerolen = document.getElementById("linkKerolen");
+        const linkGuilherme = document.getElementById("linkGuilherme");
+
+        function abrirModalVendedor(produtoNome) {
+            // Update links with specific product
+            const msgK = `Olá Kerolen, tenho interesse na ${produtoNome}, gostaria de tirar dúvidas ou comprar!`;
+            const msgG = `Olá Guilherme, tenho interesse na ${produtoNome}, gostaria de tirar dúvidas ou comprar!`;
+            
+            linkKerolen.href = `https://wa.me/5548984023936?text=${encodeURIComponent(msgK)}`;
+            linkGuilherme.href = `https://wa.me/5548984023936?text=${encodeURIComponent(msgG)}`;
+
+            modal.style.display = "flex";
+            setTimeout(() => {
+                modal.style.opacity = "1";
+            }, 10);
+        }
+
+        function fecharModalVendedor() {
+            modal.style.opacity = "0";
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300);
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                fecharModalVendedor();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+/* =========================================
+   ESTILOS EXCLUSIVOS - PÁGINA DE PRODUTO
+   (Alta Conversão, UI/UX focada)
+   ========================================= */
+
+.produto-main {
+    max-width: 1200px;
+    margin: 20px auto 100px auto; /* 100px bottom para não cobrir CTA no mobile */
+    padding: 0 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.breadcrumb a {
+    color: #0071e3;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+/* Container do Produto Superior */
+.produto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media(min-width: 900px) {
+    .produto-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* ==================================
+   GALERIA SWIPER E ZOOM
+   ================================== */
+.produto-galeria {
+    width: 100%;
+    position: relative;
+}
+
+@media(min-width: 900px) {
+    .produto-galeria {
+        width: 55%;
+        position: sticky;
+        top: 20px;
+    }
+}
+
+.gallery-main {
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+.produto-selo-destaque {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #FF3B30, #FF006A);
+    color: white;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 8px;
+    z-index: 10;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(255, 59, 48, 0.4);
+}
+
+.zoom-hint {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    z-index: 10;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.swiper-zoom-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Thumbs Slide */
+.gallery-thumbs {
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.5;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+    border: 2px solid #0071e3;
+    box-shadow: 0 4px 10px rgba(0,113,227,0.2);
+}
+
+.gallery-thumbs .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Personalização botões do Swiper */
+.custom-swiper-btn {
+    color: #1d1d1f !important;
+    background: rgba(255,255,255,0.8);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.custom-swiper-btn::after {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/* ==================================
+   INFO DO PRODUTO (DIREITA)
+   ================================== */
+.produto-info {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+}
+
+@media(min-width: 900px) {
+    .produto-info {
+        width: 45%;
+    }
+}
+
+.produto-reviews {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+}
+
+.produto-reviews .stars {
+    color: #FFB800;
+}
+
+.produto-titulo {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+.produto-subtitulo {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.produto-preco-box {
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.preco-antigo {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.preco-atual-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.preco-atual {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1d1d1f;
+    letter-spacing: -1px;
+}
+
+.preco-atual small {
+    font-size: 20px;
+}
+
+.economia-tag {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.preco-parcelado {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+.produto-urgencia {
+    background: #FFF3CD;
+    color: #856404;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ffeeba;
+    animation: fadeInOut 2s infinite;
+}
+
+.text-red {
+    color: #dc3545;
+}
+
+/* Botão do WhatsApp CTA Gigante */
+.btn-comprar-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #25D366; /* Verde do WhatsApp */
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    margin-bottom: 25px;
+}
+
+.btn-comprar-whatsapp:hover {
+    background: #1EBE5A;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+.btn-comprar-whatsapp i {
+    font-size: 24px;
+}
+
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    color: #555;
+}
+
+.badge-item i {
+    font-size: 22px;
+    color: #0071e3;
+    background: #eaf3fb;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.badge-item span {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.descricao-curta {
+    background: #f9f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.descricao-curta h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.descricao-curta p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ==================================
+   ÁREA DE DETALHES COMPLETOS
+   ================================== */
+.produto-detalhes-completos {
+    margin-top: 60px;
+}
+
+.detalhes-texto {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.detalhes-texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+}
+
+.detalhes-texto p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Grid de Benefícios */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.beneficio-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0071e3, #4b9fff);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 113, 227, 0.3);
+}
+
+.beneficio-card h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+}
+
+.beneficio-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ==================================
+   STICKY BAR CTA (MOBILE)
+   ================================== */
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 12px 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mobile-sticky-cta.visible {
+    transform: translateY(0);
+}
+
+.cta-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1d1d1f;
+}
+
+.cta-parcelas {
+    font-size: 11px;
+    color: #666;
+}
+
+.cta-btn {
+    margin-bottom: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 15px !important;
+    border-radius: 10px !important;
+}
+
+@media(min-width: 900px) {
+    /* No desktop a barra inferior não é tão necessária se a coluna for sticky */
+    .mobile-sticky-cta {
+        display: none;
+    }
+}
+
+/* ==================================
+   MODAL DE VENDEDORES (WHATSAPP)
+   ================================== */
+.modal-wpp {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-wpp-content {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.close-wpp {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-wpp:hover {
+    color: #333;
+}
+
+.modal-wpp-content h3 {
+    font-size: 20px;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+}
+
+.modal-wpp-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.vendedores-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vendedor-card {
+    display: flex;
+    align-items: center;
+    background: #f9f9fa;
+    border: 1px solid #eaeaea;
+    padding: 15px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #1d1d1f;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.vendedor-card:hover {
+    border-color: #25D366;
+    background: #f0fff4;
+    transform: translateY(-2px);
+}
+
+.vendedor-icon {
+    width: 45px;
+    height: 45px;
+    background: #e2e2e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.vendedor-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vendedor-info strong {
+    font-size: 16px;
+    color: #1d1d1f;
+    font-weight: 700;
+}
+
+.vendedor-info span {
+    font-size: 12px;
+    color: #777;
+}
+
+.wpp-icon {
+    font-size: 28px;
+    color: #25D366;
+}
