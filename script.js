@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dots[0]) dots[0].className += " active";
         
         slideIndex = 1;
-        setTimeout(mostrarSlides, 5000);
+        setTimeout(mostrarSlides, 4000);
     }
 });
 
