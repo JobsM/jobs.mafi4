@@ -25,7 +25,7 @@
         .p-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: start; margin-top: 28px; }
         .p-gallery { position: sticky; top: 24px; }
         .p-main { background: #ffffff; border: 1px solid #e5e5e5; border-radius: 18px; overflow: hidden; }
-        .p-main img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #ffffff; }
+        .p-main img { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: contain; background: #ffffff; }
         .p-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
         .p-thumbs button { padding: 0; border: 1px solid #e5e5e5; border-radius: 12px; background: #ffffff; cursor: pointer; overflow: hidden; }
         .p-thumbs button.is-active { border-color: #1d1d1f; }
@@ -46,7 +46,7 @@
         .p-table th, .p-table td { text-align: left; padding: 14px 0; border-bottom: 1px solid #e5e5e5; }
         .p-table th { width: 42%; color: #6e6e73; font-weight: 500; }
         @media (max-width: 900px) {
-            .p-main img { aspect-ratio: 16 / 10; max-height: 46vh; }
+            .p-main img { aspect-ratio: 16 / 10; max-height: 40vh; }
             .p-thumbs { grid-template-columns: repeat(4, 1fr); gap: 8px; }
             .p-grid { margin-top: 16px; }
             .p-wrap { padding-bottom: 40px; }
