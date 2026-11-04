@@ -1,27 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V20 Mini | Steve Jobs Imports</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="produto-style.css">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-
+    <meta name="description" content="Bike elétrica V20 Mini: Quadro compacto e bateria removível. Fácil de guardar e transportar.">
+    <link rel="canonical" href="https://stevemobile.com.br/v20-mini.html">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Swiper CSS para Galeria -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .p-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px 64px; }
+        .p-breadcrumb { font-size: 13px; color: #86868b; padding: 22px 0 0; }
+        .p-breadcrumb a { color: #86868b; text-decoration: none; }
+        .p-breadcrumb a:hover { color: #1d1d1f; }
+        .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 24px; }
+        .p-gallery { min-width: 0; }
+        .p-main { background: #fff; border: 1px solid #e5e5e5; border-radius: 18px; overflow: hidden; }
+        .p-main img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #fff; }
+        .p-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+        .p-thumbs button { padding: 0; border: 1px solid #e5e5e5; border-radius: 10px; background: #fff; cursor: pointer; overflow: hidden; }
+        .p-thumbs button.is-active { border-color: #1d1d1f; }
+        .p-thumbs img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; }
+        .p-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #86868b; font-weight: 600; }
+        .p-info h1 { font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -0.03em; margin: 10px 0 12px; color: #1d1d1f; }
+        .p-lede { font-size: 16px; line-height: 1.6; color: #6e6e73; max-width: 46ch; }
+        .p-specs { list-style: none; margin: 24px 0; padding: 0; border-top: 1px solid #e5e5e5; }
+        .p-specs li { display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; border-bottom: 1px solid #e5e5e5; font-size: 15px; }
+        .p-specs span:first-child { color: #6e6e73; }
+        .p-specs span:last-child { color: #1d1d1f; font-weight: 600; text-align: right; }
+        .p-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #1d1d1f; color: #fff; text-decoration: none; padding: 15px 26px; border-radius: 12px; font-weight: 600; font-size: 15px; width: 100%; transition: background-color 0.2s ease; }
+        .p-cta:hover { background: #000; }
+        .p-cta--out { background: #fff; color: #1d1d1f; border: 1px solid #d2d2d7; }
+        .p-cta--out:hover { background: #f5f5f7; }
+        .p-note { margin-top: 16px; font-size: 13px; color: #86868b; line-height: 1.6; }
+        .p-aviso { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; background: #f5f5f7; border: 1px solid #e5e5e5; border-radius: 12px; padding: 14px 16px; font-size: 14px; margin-bottom: 20px; }
+        .p-aviso a { background: #1d1d1f; color: #fff; text-decoration: none; padding: 9px 16px; border-radius: 9px; font-weight: 600; font-size: 13px; white-space: nowrap; }
+        .p-sec { max-width: 1160px; margin: 0 auto; padding: 0 20px 64px; }
+        .p-sec h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); letter-spacing: -0.02em; margin-bottom: 14px; color: #1d1d1f; }
+        .p-sec p { font-size: 16px; line-height: 1.7; color: #6e6e73; max-width: 70ch; }
+        .p-benef { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+        .p-benef div { border-top: 1px solid #e5e5e5; padding-top: 14px; }
+        .p-benef h3 { font-size: 15px; color: #1d1d1f; margin-bottom: 6px; }
+        .p-benef p { font-size: 14px; color: #6e6e73; line-height: 1.6; }
+        @media (max-width: 900px) {
+            .p-grid { grid-template-columns: 1fr; gap: 24px; }
+            .p-benef { grid-template-columns: 1fr; }
+            .p-main img { aspect-ratio: 1 / 1; }
+        }
+    </style>
 </head>
-
 <body>
-
     <header id="header">
         <div class="header-top">
             <div class="logo-container">
@@ -29,300 +61,119 @@
                     <h1 class="brand-logo-title">Steve Jobs Imports</h1>
                 </a>
             </div>
-
+            <div class="search-box">
+                <input type="text" id="input-busca" placeholder="Buscar..." aria-label="Buscar">
+                <button class="search-btn" aria-label="Pesquisar">
+                    <img id="search-icon" src="./img/search-icon.webp" alt="Buscar">
+                </button>
+            </div>
+        </div>
         <nav class="header-bottom">
             <a href="index.html">Início</a>
-            <a href="bikes.html">Ver Todas as Bikes</a>
-            <a href="index.html#vitrine">Voltar para Loja</a>
+            <a href="bikes.html">Bikes</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="https://wa.me/5548984023936" target="_blank" rel="noopener noreferrer">Contato</a>
         </nav>
     </header>
 
-    <main class="produto-main">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="index.html">Início</a> &gt; <a href="bikes.html">Bikes Elétricas</a> &gt; <span>V20 Mini</span>
+    <main class="p-wrap">
+        
+        <div class="p-breadcrumb">
+            <a href="index.html">Início</a> &nbsp;/&nbsp; <a href="bikes.html">Bikes elétricas</a> &nbsp;/&nbsp; <span>V20 Mini</span>
         </div>
 
-        <div class="produto-container">
-            <!-- Coluna de Imagens (Galeria Swiper) -->
-            <div class="produto-galeria">
-                <!-- Swiper principal com zoom -->
-                <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #000" class="swiper mySwiper2 gallery-main">
-                    
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-info.webp" alt="V20 Mini Imagem 1" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini.webp" alt="V20 Mini Imagem 2" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-back.webp" alt="V20 Mini Imagem 3" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-digital-panel.webp" alt="V20 Mini Imagem 4" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-front-flashlight.webp" alt="V20 Mini Imagem 5" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-pedal.webp" alt="V20 Mini Imagem 6" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-speed.webp" alt="V20 Mini Imagem 7" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show-spring.webp" alt="V20 Mini Imagem 8" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="./img/v20mini-show.webp" alt="V20 Mini Imagem 9" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next custom-swiper-btn"></div>
-                    <div class="swiper-button-prev custom-swiper-btn"></div>
-                    <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Toque duas vezes para dar zoom</div>
+        <div class="p-grid">
+            <div class="p-gallery">
+                <div class="p-main">
+                    <img id="foto-principal" src="./img/v20mini-info.webp" alt="Bike elétrica V20 Mini" width="1200" height="1500">
                 </div>
-
-                <!-- Swiper das miniaturas -->
-                <div thumbsSlider="" class="swiper mySwiper gallery-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-info.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-back.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-digital-panel.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-front-flashlight.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-pedal.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-speed.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show-spring.webp" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/v20mini-show.webp" />
-                        </div>
-                    </div>
-                </div>
+                <div class="p-thumbs" role="group" aria-label="Fotos da V20 Mini">
+                    <button type="button" class="is-active" aria-label="Foto 1" onclick="trocarFoto(this, './img/v20mini-info.webp')">
+                        <img src="./img/v20mini-info.webp" alt="V20 Mini foto 1" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 2" onclick="trocarFoto(this, './img/v20mini.webp')">
+                        <img src="./img/v20mini.webp" alt="V20 Mini foto 2" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 3" onclick="trocarFoto(this, './img/v20mini-show-back.webp')">
+                        <img src="./img/v20mini-show-back.webp" alt="V20 Mini foto 3" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 4" onclick="trocarFoto(this, './img/v20mini-show-digital-panel.webp')">
+                        <img src="./img/v20mini-show-digital-panel.webp" alt="V20 Mini foto 4" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 5" onclick="trocarFoto(this, './img/v20mini-show-front-flashlight.webp')">
+                        <img src="./img/v20mini-show-front-flashlight.webp" alt="V20 Mini foto 5" loading="lazy">
+                    </button>
                 </div>
             </div>
 
-            <!-- Coluna de Informações -->
-            <div class="produto-info">
+            <div class="p-info">
+                <span class="p-eyebrow">Bike elétrica</span>
+                <h1>V20 Mini</h1>
+                <p class="p-lede">Quadro compacto e bateria removível. Fácil de guardar e transportar.</p>
 
+                <ul class="p-specs">
+                    <li><span>Motor</span><span>750 W</span></li>
+                    <li><span>Quadro compacto</span><span>—</span></li>
+                    <li><span>Bateria removível</span><span>—</span></li>
+                    <li><span>Freio a disco</span><span>—</span></li>
+                    <li><span>Rodas</span><span>20"</span></li>
+                </ul>
 
-                <h1 class="produto-titulo">V20 Mini</h1>
-                <p class="produto-subtitulo">Compacta, moderna e potente</p>
+                <a class="p-cta" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20o%20pre%C3%A7o%20e%20a%20disponibilidade%20da%20V20%20Mini." target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar preço no WhatsApp
+                    </a>
 
-                <!-- Botão Comprar Desktop - Abre Modal do Vendedor -->
-                <button onclick="abrirModalVendedor()" class="btn-comprar-whatsapp" style="margin-top: 30px;">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp agora
-                </button>
-                
-                <div class="trust-badges" style="margin-top: 30px;">
-                    <div class="badge-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Garantia de Fábrica</span>
-                    </div>
-                    <div class="badge-item">
-                        <i class="fa-solid fa-truck-fast"></i>
-                        <span>Pronta Entrega</span>
-                    </div>
-                    <div class="badge-item">
-                        <i class="fa-solid fa-headset"></i>
-                        <span>Suporte Premium</span>
-                    </div>
-                </div>
-
-                <!-- Descrição Curta -->
-                <div class="descricao-curta">
-                    <h3> A Evolução da Mobilidade </h3>
-                    <p>A Inow V20 Mini é a bicicleta elétrica perfeita para quem busca mobilidade, estilo e praticidade no dia a dia com seu motor potente de 750W.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Seção Estendida: Benefícios e Descrição Completa -->
-        <div class="produto-detalhes-completos">
-            
-            <div class="detalhes-texto">
-                <h2>Conheça a V20 Mini</h2>
-                <p>Com autonomia de até 50 km e velocidade de 32 km/h, apresenta pneus largos 16x4.0, suspensão dupla, freios hidráulicos e muito mais modernidade com display LCD e NFC.</p>
-            </div>
-
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
-                    <h4>Mobilidade sem esforço</h4>
-                    <p>Chegue ao destino rápido, sem se cansar com subidas ou longos trajetos.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="icon-circle"><i class="fa-solid fa-leaf"></i></div>
-                    <h4>Sustentabilidade</h4>
-                    <p>Uma alternativa ecológica que ajuda a reduzir a poluição e a emissão de carbono.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="icon-circle"><i class="fa-solid fa-wallet"></i></div>
-                    <h4>Máxima Economia</h4>
-                    <p>Você gasta pouquíssimo com recarga quando comparado ao combustível ou transporte público.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="icon-circle"><i class="fa-solid fa-traffic-light"></i></div>
-                    <h4>Praticidade Urbana</h4>
-                    <p>Evita engarrafamentos, facilita na hora de estacionar e garante sua agilidade no dia a dia.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h4>Saúde e Bem-estar</h4>
-                    <p>Permite pedalar no modo híbrido, unindo um ótimo exercício físico com o auxílio elétrico.</p>
-                </div>
+                <p class="p-note">
+                    Entrega montada e testada. Garantia da loja e suporte direto no WhatsApp.<br>
+                    Montagem, revisão e garantia na nossa oficina própria.
+                </p>
             </div>
         </div>
     </main>
 
-    <!-- Barra Sticky de CTA para Mobile -->
-    <div class="mobile-sticky-cta" style="justify-content: center;">
-        <button onclick="abrirModalVendedor()" class="btn-comprar-whatsapp cta-btn" style="width: 100%;">
-            Comprar <i class="fa-brands fa-whatsapp"></i>
-        </button>
-    </div>
+    <section class="p-sec">
+        <h2>Sobre a V20 Mini</h2>
+        <p>A Inow V20 Mini é a bicicleta elétrica perfeita para quem busca mobilidade, estilo e praticidade no dia a dia com seu motor potente de 750W.</p>
 
-    <!-- MODAL ESCOLHA DE VENDEDOR WHATSAPP -->
-    <div id="modalVendedor" class="modal-wpp">
-        <div class="modal-wpp-content">
-            <span class="close-wpp" onclick="fecharModalVendedor()">&times;</span>
-            <h3>Deseja falar com qual vendedor?</h3>
-            <p>Escolha um dos nossos especialistas para finalizar sua compra ou tirar dúvidas.</p>
-            
-            <div class="vendedores-opcoes">
-                <!-- VENDEDORA KEROLEN -->
-                <a href="https://wa.me/5548988764683?text=Olá%20Kerolen,%20tenho%20interesse%20na%20Bike%20Elétrica%20V40%20Pro%201000W,%20gostaria%20de%20dúvidas/comprar!" target="_blank" rel="noopener noreferrer" class="vendedor-card">
-                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
-                    <div class="vendedor-info">
-                        <strong>Kerolen</strong>
-                        <span>Atendimento Especializado</span>
-                    </div>
-                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
-                </a>
-
-                <!-- VENDEDOR GUILHERME -->
-                <a href="https://wa.me/5548984023936?text=Olá%20Guilherme,%20tenho%20interesse%20na%20Bike%20Elétrica%20V40%20Pro%201000W,%20gostaria%20de%20dúvidas/comprar!" target="_blank" rel="noopener noreferrer" class="vendedor-card">
-                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
-                    <div class="vendedor-info">
-                        <strong>Guilherme</strong>
-                        <span>Atendimento Especializado</span>
-                    </div>
-                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
-                </a>
+        <div class="p-benef">
+            <div>
+                <h3>Teste antes da entrega</h3>
+                <p>Motor, freio, câmbio e bateria conferidos um por um.</p>
+            </div>
+            <div>
+                <h3>Entrega montada</h3>
+                <p>Você recebe pronta para pedalar, com o selim ajustado.</p>
+            </div>
+            <div>
+                <h3>Oficina própria</h3>
+                <p>Revisão e manutenção com quem montou a sua bike.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-container">
+            <div class="footer-social-links">
+                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
             <div class="footer-bottom">
-                <p>© 2026 Steve Jobs Imports - Todos os direitos reservados.</p>
+                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Swiper JS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Configuração da Galeria -->
     <script>
-        var swiperThumbs = new Swiper(".mySwiper", {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-            breakpoints: {
-                // em telas menores, botar 3 thumbnails
-                320: { slidesPerView: 3 },
-                768: { slidesPerView: 4 }
-            }
-        });
-        
-        var swiperMain = new Swiper(".mySwiper2", {
-            spaceBetween: 10,
-            zoom: {
-                maxRatio: 3, // Permite zoom de 3x tocando 2x ou num clique
-                toggle: true
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiperThumbs,
-            },
-            grabCursor: true // Facilita mostrar pro usuário que é "arrastável" (swipe)
-        });
-
-        // Mostrar/esconder Sticky bar on scroll mobile
-        const stickyBar = document.querySelector('.mobile-sticky-cta');
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 400) {
-                stickyBar.classList.add('visible');
-            } else {
-                stickyBar.classList.remove('visible');
-            }
-        });
-
-        // Controle do Modal de Vendedor
-        const modal = document.getElementById("modalVendedor");
-        function abrirModalVendedor() {
-            modal.style.display = "flex";
-            // Previne o clique duplo acidental
-            setTimeout(() => {
-                modal.style.opacity = "1";
-            }, 10);
-        }
-        function fecharModalVendedor() {
-            modal.style.opacity = "0";
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
-        }
-        // Fechar ao clicar fora
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                fecharModalVendedor();
-            }
+        function trocarFoto(botao, src) {
+            document.getElementById('foto-principal').src = src;
+            document.querySelectorAll('.p-thumbs button').forEach(function (b) {
+                b.classList.remove('is-active');
+            });
+            botao.classList.add('is-active');
         }
     </script>
 </body>
