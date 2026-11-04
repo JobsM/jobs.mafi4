@@ -1336,7 +1336,7 @@ body {
 }
 
 /* =========================================
-   SEÇÃO BIKES ELÉTRICAS MERCADO LIVRE
+   SEÇÃO BIKES ELÉTRICAS
    ========================================= */
 .section-bikes-afiliados {
     background-color: #f5f5f7;
@@ -1440,24 +1440,21 @@ body {
     margin-bottom: 18px;
 }
 
-.btn-ml-afiliado {
+.btn-whatsapp-bike {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #ffe600;
-    color: #2d3277;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
+    background-color: #1d1d1f;
+    color: #ffffff;
     padding: 12px 20px;
     border-radius: 12px;
-    transition: background-color 0.25s ease, transform 0.25s ease;
-    border: none;
-    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
 }
 
-.btn-ml-afiliado:hover {
-    background-color: #f5dc00;
-    transform: translateY(-2px);
+.btn-whatsapp-bike:hover {
+    background-color: #000000;
 }
