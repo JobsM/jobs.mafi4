@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Steve Jobs Imports</title>
+    <meta name="description" content="Catálogo completo de produtos: iPhones, Macs, iPads, Apple Watch, AirPods, Bikes Elétricas, Óculos e Video Games. Filtre por categoria e consulte via WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ============================
+         HEADER
+         ============================ -->
+    <header id="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <h1 class="brand-logo-title">Steve Jobs Imports</h1>
+                </a>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="input-busca" placeholder="Buscar produtos..." aria-label="Buscar">
+                <button class="search-btn" aria-label="Pesquisar">
+                    <img id="search-icon" src="./img/search-icon.webp" alt="Buscar">
+                </button>
+            </div>
+        </div>
+
+        <nav class="header-bottom">
+            <div class="dropdown-menu">
+                <a href="#" class="btn-categoria">Categorias &#9662;</a>
+                <div class="dropdown-content">
+                    <button onclick="filtrarProdutos('todos')">Ver Tudo</button>
+                    <button onclick="filtrarProdutos('iphone')">iPhone</button>
+                    <button onclick="filtrarProdutos('mac')">Mac</button>
+                    <button onclick="filtrarProdutos('ipad')">iPad</button>
+                    <button onclick="filtrarProdutos('watch')">Apple Watch</button>
+                    <button onclick="filtrarProdutos('airpods')">AirPods</button>
+                    <button onclick="filtrarProdutos('bike')">Bikes Elétricas</button>
+                    <button onclick="filtrarProdutos('oculos')">Óculos</button>
+                    <button onclick="filtrarProdutos('videogames')">Video Games</button>
+                </div>
+            </div>
+            <a href="iphone18-prevenda.html" class="nav-tag-prevenda">Pré-Venda iPhone 18</a>
+            <a href="index.html">Home</a>
+            <a href="https://wa.me/5548984023936" target="_blank">Contato</a>
+            <a href="index.html#avaliacoes">Avaliações</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================
+             CABEÇALHO DO CATÁLOGO
+             ============================ -->
+        <div class="catalogo-header">
+            <p class="section-label">Steve Mobile &amp; Steve Jobs Imports</p>
+            <h1 class="catalogo-titulo">Catálogo Completo</h1>
+            <p class="catalogo-sub">Encontre o produto ideal. Filtre por categoria ou use a busca acima.</p>
+
+            <!-- Filtros -->
+            <div class="filtros-categorias" id="filtros">
+                <button class="btn-filtro ativo" onclick="filtrarProdutos('todos'); setFiltroAtivo(this)">Todos</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('iphone'); setFiltroAtivo(this)">iPhone</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('mac'); setFiltroAtivo(this)">Mac</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('ipad'); setFiltroAtivo(this)">iPad</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('watch'); setFiltroAtivo(this)">Apple Watch</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('airpods'); setFiltroAtivo(this)">AirPods</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('bike'); setFiltroAtivo(this)">Bikes</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('oculos'); setFiltroAtivo(this)">Óculos</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('videogames'); setFiltroAtivo(this)">Video Games</button>
+                <button class="btn-filtro" onclick="filtrarProdutos('lancamento'); setFiltroAtivo(this)">Lançamentos</button>
+            </div>
+        </div>
+
+        <!-- ============================
+             GRADE DE PRODUTOS
+             ============================ -->
+        <section id="vitrine" class="section-editorial" style="padding-top: 0;">
+            <div class="grade-produtos" id="grade-catalogo">
+
+                <!-- ── iPhone 18 Pro Max (Pré-Venda) ── -->
+                <article class="card-produto card-prevenda-full reveal" data-categoria="iphone lancamento prevenda">
+                    <span class="selo-popular">Lançamento</span>
+                    <div class="prevenda-card-body">
+                        <div class="img-container" style="height: 280px; margin-bottom: 0; background: #f0f0f0;">
+                            <img src="./img/hero-iphone18-dark-cherry.webp" alt="iPhone 18 Pro Max Dark Cherry" loading="lazy">
+                        </div>
+                        <div class="info-container" style="text-align: left;">
+                            <h3 class="titulo-produto" style="text-align: left; font-size: 26px; font-weight: 800; min-height: auto; margin-bottom: 10px;">iPhone 18 Pro Max</h3>
+                            <p style="font-size: 15px; color: #6e6e73; margin-bottom: 20px; line-height: 1.55;">
+                                Chip Apple A20 Pro em 2nm, câmera 50MP com abertura variável, Dynamic Island 35% menor e 5G via satélite.
+                            </p>
+                            <div class="selector-cores" style="margin-bottom: 24px;">
+                                <p class="cor-label">Escolha a cor</p>
+                                <div class="cores-container" style="justify-content: flex-start;">
+                                    <button class="btn-cor" style="background-color:#5c1b2a;" title="Dark Cherry" onclick="mudarCor(this,'./img/hero-iphone18-dark-cherry.webp','iPhone 18 Pro Max Dark Cherry')"></button>
+                                    <button class="btn-cor" style="background-color:#9dc3dc;" title="Light Blue"  onclick="mudarCor(this,'./img/cor-light-blue.webp','iPhone 18 Pro Max Light Blue')"></button>
+                                    <button class="btn-cor" style="background-color:#3f4144;" title="Dark Gray"   onclick="mudarCor(this,'./img/cor-dark-gray.webp','iPhone 18 Pro Max Dark Gray')"></button>
+                                    <button class="btn-cor" style="background-color:#d1d1cf;" title="Silver"      onclick="mudarCor(this,'./img/cor-silver.webp','iPhone 18 Pro Max Silver')"></button>
+                                </div>
+                            </div>
+                            <a href="iphone18-prevenda.html#form-lista" class="btn-comprar" style="display: inline-flex; width: auto; padding: 15px 30px;">
+                                Entrar na Pré-Venda &rsaquo;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 17 Pro Max ── -->
+                <article class="card-produto card-destaque reveal" data-categoria="iphone lancamento">
+                    <span class="selo-popular">Mais Vendido</span>
+                    <div class="img-container">
+                        <img src="./img/17pro.webp" alt="iPhone 17 Pro Max" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 17 Pro Max</h3>
+                        <div class="selector-cores">
+                            <p class="cor-label">Escolha a cor</p>
+                            <div class="cores-container">
+                                <button class="btn-cor" style="background-color:#ff9f0a;" onclick="mudarCor(this,'./img/17pro.webp','iPhone 17 Pro Max Laranja')"></button>
+                                <button class="btn-cor" style="background-color:#004080;" onclick="mudarCor(this,'./img/17pro-blue.webp','iPhone 17 Pro Max Azul Intenso')"></button>
+                                <button class="btn-cor" style="background-color:#ececec;" onclick="mudarCor(this,'./img/17pro-silver.webp','iPhone 17 Pro Max Silver')"></button>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Pro Max!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 17 ── -->
+                <article class="card-produto reveal" data-categoria="iphone lancamento">
+                    <span class="selo-novo">Novo</span>
+                    <div class="img-container">
+                        <img src="./img/17sev.webp" alt="iPhone 17" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 17 Lavanda</h3>
+                        <div class="selector-cores">
+                            <p class="cor-label">Escolha a cor</p>
+                            <div class="cores-container">
+                                <button class="btn-cor" style="background-color:#d8c3e6;" onclick="mudarCor(this,'./img/17lavanda.webp','iPhone 17 Lavanda')"></button>
+                                <button class="btn-cor" style="background-color:#9ba691;" onclick="mudarCor(this,'./img/17salvia.webp','iPhone 17 Sálvia')"></button>
+                                <button class="btn-cor" style="background-color:#a5b3ce;" onclick="mudarCor(this,'./img/17azul.webp','iPhone 17 Azul-névoa')"></button>
+                                <button class="btn-cor" style="background-color:#f2f2f2;" onclick="mudarCor(this,'./img/17branco.webp','iPhone 17 Branco')"></button>
+                                <button class="btn-cor" style="background-color:#1d1d1f;" onclick="mudarCor(this,'./img/17preto.webp','iPhone 17 Preto')"></button>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 17 Air ── -->
+                <article class="card-produto reveal" data-categoria="iphone lancamento">
+                    <span class="selo-novo">Novo</span>
+                    <div class="img-container">
+                        <img src="./img/17air.webp" alt="iPhone 17 Air" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 17 Air</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 17 Air!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 16e ── -->
+                <article class="card-produto reveal" data-categoria="iphone lancamento">
+                    <span class="selo-novo">Novo</span>
+                    <div class="img-container">
+                        <img src="./img/16e.webp" alt="iPhone 16e" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16e</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16e!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 16 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/16pro.webp" alt="iPhone 16 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 16 Pro Max ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/16promaxsev.webp" alt="iPhone 16 Pro Max" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16 Pro Max</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Pro Max!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 16 Plus ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/16sev.webp" alt="iPhone 16 Plus" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16 Plus</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16 Plus!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 16 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/iphone16.webp" alt="iPhone 16" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 16</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 16!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 15 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/15prosev.webp" alt="iPhone 15 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 15 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 15 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/15normal.webp" alt="iPhone 15" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 15</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 15!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 14 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/14pro.webp" alt="iPhone 14 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 14 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 14 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/14sev.webp" alt="iPhone 14" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 14</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 14!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 13 Pro Max ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/13promax.webp" alt="iPhone 13 Pro Max" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 13 Pro Max</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro Max!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 13 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/13prosev.webp" alt="iPhone 13 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 13 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 13 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/13.webp" alt="iPhone 13" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 13</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 13!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 12 Pro Max ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/12promax.webp" alt="iPhone 12 Pro Max" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 12 Pro Max</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro Max!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 12 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/12pro.webp" alt="iPhone 12 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 12 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 12 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/12.webp" alt="iPhone 12" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 12</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 12!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 11 Pro ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/11prosev.webp" alt="iPhone 11 Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 11 Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11 Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPhone 11 ── -->
+                <article class="card-produto reveal" data-categoria="iphone">
+                    <div class="img-container">
+                        <img src="./img/11.webp" alt="iPhone 11" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPhone 11</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPhone 11!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── MacBook Pro M5 ── -->
+                <article class="card-produto reveal" data-categoria="mac">
+                    <span class="selo-popular">Mais Vendido</span>
+                    <div class="img-container">
+                        <img src="./img/macbookprom5.webp" alt="MacBook Pro M5" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">MacBook Pro M5</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook Pro M5!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── MacBook Air M5 ── -->
+                <article class="card-produto reveal" data-categoria="mac lancamento">
+                    <span class="selo-popular">Mais Vendido</span>
+                    <div class="img-container">
+                        <img src="./img/macbookairM5.webp" alt="MacBook Air M5" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">MacBook Air M5</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no MacBook Air M5!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iMac Pro ── -->
+                <article class="card-produto reveal" data-categoria="mac">
+                    <div class="img-container">
+                        <img src="./img/imacpro.webp" alt="iMac Pro" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iMac Pro</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iMac Pro!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iMac 24" ── -->
+                <article class="card-produto reveal" data-categoria="mac">
+                    <div class="img-container">
+                        <img src="./img/imac.webp" alt="iMac 24" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iMac 24"</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iMac!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPad Pro M4 ── -->
+                <article class="card-produto reveal" data-categoria="ipad lancamento">
+                    <div class="img-container">
+                        <img src="./img/ipadprom4.webp" alt="iPad Pro M4" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Pro M4</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M4!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPad Pro M2 ── -->
+                <article class="card-produto reveal" data-categoria="ipad">
+                    <div class="img-container">
+                        <img src="./img/ipadprom2.webp" alt="iPad Pro M2" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Pro M2</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Pro M2!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── iPad Air M5 ── -->
+                <article class="card-produto reveal" data-categoria="ipad">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/ipadairm5.webp" alt="iPad Air M5" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">iPad Air M5</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no iPad Air M5!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Apple Watch Ultra 3 ── -->
+                <article class="card-produto reveal" data-categoria="watch lancamento">
+                    <div class="img-container">
+                        <img src="./img/applewatchultra3.webp" alt="Apple Watch Ultra 3" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Ultra 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Ultra 3!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Apple Watch Series 11 ── -->
+                <article class="card-produto reveal" data-categoria="watch lancamento">
+                    <div class="img-container">
+                        <img src="./img/applewatchseries11.webp" alt="Apple Watch Series 11" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Series 11</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Series 11!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Apple Watch Ultra ── -->
+                <article class="card-produto reveal" data-categoria="watch">
+                    <div class="img-container">
+                        <img src="./img/applewatchultra.webp" alt="Apple Watch Ultra" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch Ultra</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch Ultra!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Apple Watch SE 3 ── -->
+                <article class="card-produto reveal" data-categoria="watch">
+                    <div class="img-container">
+                        <img src="./img/applewatchSE3.webp" alt="Apple Watch SE 3" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Apple Watch SE 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Apple Watch SE 3!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── AirPods Pro 3 ── -->
+                <article class="card-produto reveal" data-categoria="airpods lancamento">
+                    <div class="img-container">
+                        <img src="./img/airpodspro3.webp" alt="AirPods Pro 3" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">AirPods Pro 3</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods Pro 3!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── AirPods 4 ── -->
+                <article class="card-produto reveal" data-categoria="airpods lancamento">
+                    <div class="img-container">
+                        <img src="./img/airpods4.webp" alt="AirPods 4" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">AirPods 4</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no AirPods 4!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike X50 PRO ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/x50pro1000w.webp" alt="Bike Elétrica X50 PRO" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica X50 PRO</h3>
+                        <a href="x50-pro.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike T16 ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/t16-product.webp" alt="Bicicleta Elétrica T16" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bicicleta Elétrica T16</h3>
+                        <a href="t16.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike Y16 ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/y16-product.webp" alt="Bicicleta Elétrica Y16" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bicicleta Elétrica Y16</h3>
+                        <a href="y16.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike X50 ACTION ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/x50action.webp" alt="Bicicleta Elétrica X50 ACTION" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica X50 ACTION</h3>
+                        <a href="x50-action.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V9 Max ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/v9max.webp" alt="Bike Elétrica V9 Max 1000W" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V9 Max</h3>
+                        <a href="v9-max.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V10 Max (Esgotado) ── -->
+                <article class="card-produto reveal" data-categoria="bike">
+                    <span class="selo-esgotado">Esgotado</span>
+                    <div class="img-container">
+                        <img src="./img/v10max1000w.webp" alt="Bike Elétrica V10 Max 1000W" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V10 Max</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na V10 Max!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V40 Pro ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v40pro.webp" alt="Bike Elétrica V40 Pro 1000W" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V40 Pro</h3>
+                        <a href="v40.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V20 (Esgotado) ── -->
+                <article class="card-produto reveal" data-categoria="bike">
+                    <span class="selo-esgotado">Esgotado</span>
+                    <div class="img-container">
+                        <img src="./img/v20.webp" alt="Bike Elétrica V20" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V20</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na V20!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V35 ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v35.webp" alt="Bike Elétrica V35" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V35</h3>
+                        <a href="v35.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike V20 Mini ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/v20mini.webp" alt="Bike Elétrica V20 Mini" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica V20 Mini</h3>
+                        <a href="v20-mini.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike X30 ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/x30inow-show.webp" alt="Bike Elétrica X30 1000W" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica X30</h3>
+                        <a href="x30.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Bike OUXI V9 ── -->
+                <article class="card-produto reveal" data-categoria="bike lancamento">
+                    <span class="selo-lancamento">Lançamento</span>
+                    <div class="img-container">
+                        <img src="./img/ouxiv9-show-true.webp" alt="Bike Elétrica OUXI V9" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Bike Elétrica OUXI V9</h3>
+                        <a href="ouxi-v9.html" class="btn-whatsapp btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </article>
+
+                <!-- ── Eco Bike (Esgotado) ── -->
+                <article class="card-produto reveal" data-categoria="bike">
+                    <span class="selo-esgotado">Esgotado</span>
+                    <div class="img-container">
+                        <img src="./img/ecobike.webp" alt="Eco Bike Elétrica" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Eco Bike</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse na Eco Bike!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Óculos Oakley x Meta Vanguards ── -->
+                <article class="card-produto reveal" data-categoria="oculos lancamento">
+                    <span class="selo-novo">Novo</span>
+                    <div class="img-container">
+                        <img src="./img/metavanguardsprizm.webp" alt="Óculos Meta Vanguards Prizm" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Óculos Oakley x Meta Vanguards Prizm</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse nos Óculos Meta Vanguards!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Meta Quest 3 ── -->
+                <article class="card-produto reveal" data-categoria="oculos lancamento">
+                    <span class="selo-ia">Tech</span>
+                    <div class="img-container">
+                        <img src="./img/oculosmetaquest3.webp" alt="Óculos Meta Quest 3 512GB" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Óculos Meta Quest 3 512GB</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Meta Quest 3!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── Wayfarer Gen 2 ── -->
+                <article class="card-produto reveal" data-categoria="oculos lancamento">
+                    <span class="selo-novo">Novo</span>
+                    <div class="img-container">
+                        <img src="./img/wayfarergen2.webp" alt="Óculos Wayfarer Gen 2" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">Óculos Wayfarer RayBan Gen 2</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no Wayfarer Gen 2!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- ── PlayStation 5 Slim ── -->
+                <article class="card-produto reveal" data-categoria="videogames destaque">
+                    <span class="selo-destaque">Destaque</span>
+                    <div class="img-container">
+                        <img src="./img/ps5.webp" alt="PlayStation 5 Slim" loading="lazy">
+                    </div>
+                    <div class="info-container">
+                        <h3 class="titulo-produto">PlayStation 5 Slim</h3>
+                        <a href="https://wa.me/5548984023936?text=Tenho interesse no PS5!" target="_blank" class="btn-comprar">Consultar via WhatsApp</a>
+                    </div>
+                </article>
+
+            </div><!-- /grade-produtos -->
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social-links">
+                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/stevemobile_" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5548984023936?text=Olá,%20gostaria%20de%20saber%20mais%20informações!" target="_blank"
+        class="floating-whatsapp" aria-label="Fale conosco via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Ativa filtro via query string (?cat=iphone)
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            if (cat) {
+                filtrarProdutos(cat);
+                // Marca botão correto como ativo
+                document.querySelectorAll('.btn-filtro').forEach(btn => {
+                    btn.classList.remove('ativo');
+                    if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${cat}'`)) {
+                        btn.classList.add('ativo');
+                    }
+                });
+            }
+        });
+
+        function setFiltroAtivo(el) {
+            document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('ativo'));
+            el.classList.add('ativo');
+        }
+    </script>
+</body>
+
+</html>

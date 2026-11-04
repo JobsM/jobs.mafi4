@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>E-Bikes Premium | JOBS MAFIA</title>
+    <title>Bikes elétricas | Steve Jobs Imports</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="produto-style.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
@@ -85,194 +85,224 @@
     <header id="header">
         <div class="header-top">
             <div class="logo-container">
-                <a href="index.html" class="logo-wrapper box-ste">
-                    <img src="./img/steve-jobs-logo.webp" alt="Steve Jobs Imports">
-                </a>
-                <span class="logo-divisor">|</span>
-                <a href="index.html" class="logo-wrapper box-mobile">
-                    <img src="./img/steve-mobile-logo.webp" alt="Steve Mobile">
+                <a href="index.html" class="logo-link">
+                    <h1 class="brand-logo-title">Steve Jobs Imports</h1>
                 </a>
             </div>
-
-            <nav class="header-bottom" style="border: none; padding-top: 0;">
-                <a href="index.html" style="font-size: 15px; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px;">Voltar p/ Início</a>
-            </nav>
+            <div class="search-box">
+                <input type="text" id="input-busca" placeholder="Buscar bikes..." aria-label="Buscar">
+                <button class="search-btn" aria-label="Pesquisar">
+                    <img id="search-icon" src="./img/search-icon.webp" alt="Buscar">
+                </button>
+            </div>
         </div>
+
+        <nav class="header-bottom">
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo Completo</a>
+            <a href="iphone18-prevenda.html">Pré-Venda iPhone 18</a>
+            <a href="https://wa.me/5548984023936" target="_blank">Contato</a>
+        </nav>
     </header>
 
     <main>
+        <!-- ============================
+             HERO BIKES ELÉTRICAS
+             ============================ -->
         <section class="bikes-hero">
-            <h1>Mobilidade Elétrica</h1>
-            <p>Descubra a liberdade de se locomover com estilo, potência e zero emissão de carbono.</p>
+            <h1>Bikes Elétricas Selecionadas</h1>
+            <p>Conheça os modelos líderes de mercado no Mercado Livre com o melhor custo-benefício, potência e autonomia do Brasil.</p>
         </section>
 
-        <!-- CATÁLOGO SÓ DE BIKES -->
-        <section class="grade-bikes">
+        <!-- ============================
+             SEÇÃO BIKES ELÉTRICAS — MERCADO LIVRE
+             ============================ -->
+        <section class="section-bikes-afiliados" id="bikes-afiliados" style="padding-top: 10px;">
+            <div class="section-editorial">
+                <div class="bikes-grid">
+                    <!-- Bike 1: Atrio Miami 350W -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
+                        <div class="img-bike-container">
+                            <img src="./img/ecobike.webp" alt="Atrio Miami 350W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Atrio Miami Aro 26</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.7</span> (500+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 3.299,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-atrio-miami-aro-26-350w-cinza/p/MLB19582103" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
 
-            <!-- x50 PRO (Leva pra pág do produto) -->
-            <article class="card-produto card-destaque" style="transform: none;">
-                <span class="selo-destaque">🔥 Destaque</span>
-                <div class="img-container"><img src="./img/x50pro1000w.webp" alt="Bike Elétrica X50 PRO"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica X50 PRO 🚲</h3>
-                    <a href="x50-pro.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
+                    <!-- Bike 2: Sousa 350W -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
+                        <div class="img-bike-container">
+                            <img src="./img/v10max1000w.webp" alt="Sousa 350W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Sousa 48V com Cesta</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.6</span> (1.000+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 3.890,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-sousa-350w-bateria-chumbo-48v/p/MLB24192031" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 3: Honey Whale S6S -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
+                        <div class="img-bike-container">
+                            <img src="./img/v20mini.webp" alt="Honey Whale S6S 750W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Honey Whale S6S Dobrável</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.8</span> (300+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 4.399,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-dobravel-honey-whale-s6s-750w-48v/p/MLB27891044" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 4: Dropp Joy City 500W -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
+                        <div class="img-bike-container">
+                            <img src="./img/t16-product.webp" alt="Dropp Joy City 500W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Dropp Joy City Lítio</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.7</span> (250+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 4.190,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-dropp-joy-city-500w-bateria-litio/p/MLB26543109" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 5: TwoDogs Ecobike T16 -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
+                        <div class="img-bike-container">
+                            <img src="./img/y16-product.webp" alt="TwoDogs Ecobike T16" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">TwoDogs Ecobike T16 / Y16</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.8</span> (400+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 4.990,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-twodogs-ecobike-t16-350w-litio/p/MLB28910452" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 6: Ouxi V9 Fat Bike -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
+                        <div class="img-bike-container">
+                            <img src="./img/ouxiV9.webp" alt="Ouxi V9 750W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Ouxi V9 Fat Bike /</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.9</span> (Top Fat Bike)
+                            </div>
+                            <div class="price-bike">R$ 6.990,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-ouxi-v9-750w-fat-bike-48v/p/MLB31094823" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 7: Sousa 1000W -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
+                        <div class="img-bike-container">
+                            <img src="./img/v8ultra1000w.webp" alt="Sousa 1000W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Sousa Heavy Duty</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.7</span> (800+ vendas)
+                            </div>
+                            <div class="price-bike">R$ 5.990,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-sousa-1000w-48v-com-pedal/p/MLB29401822" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 8: Inow V20 -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
+                        <div class="img-bike-container">
+                            <img src="./img/v35.webp" alt="Inow V20 750W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Inow V20 / V35 Fat Bike</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.8</span> (Alta Performance)
+                            </div>
+                            <div class="price-bike">R$ 6.490,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-inow-v20-750w-fat-tire-litio/p/MLB32890124" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 9: Caloi E-Vibe -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
+                        <div class="img-bike-container">
+                            <img src="./img/v40pro.webp" alt="Caloi E-Vibe City Tour" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Caloi E-Vibe City Tour Shimano</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.9</span> (Motor Shimano)
+                            </div>
+                            <div class="price-bike">R$ 7.499,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-caloi-e-vibe-city-tour-shimano/p/MLB18920194" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
+
+                    <!-- Bike 10: Sense Fun E-Act -->
+                    <article class="card-bike-afiliado reveal">
+                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
+                        <div class="img-bike-container">
+                            <img src="./img/x50pro1000w.webp" alt="Sense Fun E-Act 250W" loading="lazy">
+                        </div>
+                        <div>
+                            <h3 class="title-bike">Sense Fun E-Act Shimano</h3>
+                            <div class="rating-bike">
+                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.9</span> (High-End)
+                            </div>
+                            <div class="price-bike">R$ 7.990,00</div>
+                        </div>
+                        <a href="https://www.mercadolivre.com.br/bicicleta-eletrica-sense-fun-e-act-bateria-integrada/p/MLB25401928" target="_blank" rel="noopener noreferrer" class="btn-ml-afiliado">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar no Mercado Livre
+                        </a>
+                    </article>
                 </div>
-            </article>
-
-            <!-- T16 -->
-            <article class="card-produto">
-                <span class="selo-destaque">🔥 Destaque</span>
-                <div class="img-container"><img src="./img/t16-product.webp" alt="Bicicleta Elétrica T16"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bicicleta Elétrica T16 🚲</h3>
-                    <a href="t16.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- Y16 -->
-            <article class="card-produto">
-                <span class="selo-destaque">🔥 Destaque</span>
-                <div class="img-container"><img src="./img/y16-product.webp" alt="Bicicleta Elétrica Y16"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bicicleta Elétrica Y16 🚲</h3>
-                    <a href="y16.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- X50 ACTION -->
-            <article class="card-produto">
-                <span class="selo-popular">⚡ Lançamento</span>
-                <div class="img-container"><img src="./img/x50action.webp" alt="Bicicleta Elétrica X50 ACTION"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica X50 ACTION 🚲</h3>
-                    <a href="x50-action.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- Eco Bike -->
-            <article class="card-produto">
-                <span class="selo-esgotado">Esgotado 🚫</span>
-                <div class="img-container"><img src="./img/ecobike.webp" alt="Eco Bike Elétrica"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Eco Bike 🚲</h3>
-                    <button class="btn-wpp-card" onclick="abrirModalVendedor('Eco Bike')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
-                </div>
-            </article>
-
-            <!-- v9 Max -->
-            <article class="card-produto">
-                <span class="selo-destaque">🔥 Destaque</span>
-                <div class="img-container"><img src="./img/v9max.webp" alt="Bike Elétrica v9 Max 1000W"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike v9 Max 1000W 🚲</h3>
-                    <a href="v9-max.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- v10 Max -->
-            <article class="card-produto">
-                <span class="selo-esgotado">Esgotado 🚫</span>
-                <div class="img-container"><img src="./img/v10max1000w.webp" alt="Bike Elétrica v10 Max 1000W"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike v10 Max 1000W 🚲</h3>
-                    <button class="btn-wpp-card" onclick="abrirModalVendedor('v10 Max 1000W')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
-                </div>
-            </article>
-
-            <!-- v40 Pro -->
-            <article class="card-produto">
-                <span class="selo-destaque">🔥 Destaque</span>
-                <div class="img-container"><img src="./img/v40pro.webp" alt="Bike Elétrica v40 Pro 1000W"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike v40 Pro 1000W 🚲</h3>
-                    <a href="v40.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- v20 -->
-            <article class="card-produto">
-                <span class="selo-esgotado">Esgotado 🚫</span>
-                <div class="img-container"><img src="./img/v20.webp" alt="Bike Elétrica V20"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica V20</h3>
-                    <button class="btn-wpp-card" onclick="abrirModalVendedor('V20')">Comprar <i class="fa-brands fa-whatsapp"></i></button>
-                </div>
-            </article>
-
-            <!-- v35 -->
-            <article class="card-produto">
-                <span class="selo-popular">⚡ Lançamento</span>
-                <div class="img-container"><img src="./img/v35.webp" alt="Bike Elétrica V35"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica V35 🚲</h3>
-                    <a href="v35.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- v20 Mini -->
-            <article class="card-produto">
-                <span class="selo-popular">⚡ Lançamento</span>
-                <div class="img-container"><img src="./img/v20mini.webp" alt="Bike Elétrica V20 Mini"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike V20 Mini 🚲</h3>
-                    <a href="v20-mini.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- X30 -->
-            <article class="card-produto">
-                <span class="selo-popular">⚡ Lançamento</span>
-                <div class="img-container"><img src="./img/x30inow-show.webp" alt="Bike Elétrica X30"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica X30 1000W 🚲</h3>
-                    <a href="x30.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-            <!-- OUXI V9 -->
-            <article class="card-produto">
-                <span class="selo-popular">⚡ Lançamento</span>
-                <div class="img-container"><img src="./img/ouxiv9-show-true.webp" alt="Bike Elétrica OUXI V9"></div>
-                <div class="info-container">
-                    <h3 class="titulo-produto">Bike Elétrica OUXI V9 🚲</h3>
-                    <a href="ouxi-v9.html" class="btn-wpp-card btn-detalhes">Ver Detalhes 🔍</a>
-                </div>
-            </article>
-
-        </section>
-
-    </main>
-
-    <!-- MODAL ESCOLHA DE VENDEDOR WHATSAPP -->
-    <div id="modalVendedor" class="modal-wpp">
-        <div class="modal-wpp-content">
-            <span class="close-wpp" onclick="fecharModalVendedor()">&times;</span>
-            <h3>Deseja falar com qual vendedor?</h3>
-            <p>Escolha um dos nossos especialistas para finalizar sua compra ou tirar dúvidas.</p>
-            
-            <div class="vendedores-opcoes">
-                <!-- VENDEDORA KEROLEN -->
-                <a id="linkKerolen" href="https://wa.me/5548988764683?text=Olá%20Kerolen,%20tenho%20interesse%20na%20Bike%20Elétrica%20V20%20Mini,%20gostaria%20de%20dúvidas/comprar!" target="_blank" class="vendedor-card">
-                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
-                    <div class="vendedor-info">
-                        <strong>Kerolen</strong>
-                        <span>Atendimento Especializado</span>
-                    </div>
-                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
-                </a>
-
-                <!-- VENDEDOR GUILHERME -->
-                <a id="linkGuilherme" href="https://wa.me/5548984023936?text=Olá%20Guilherme,%20tenho%20interesse%20na%20Bike%20Elétrica%20V20%20Mini,%20gostaria%20de%20dúvidas/comprar!" target="_blank" class="vendedor-card">
-                    <div class="vendedor-icon"><i class="fa-regular fa-user"></i></div>
-                    <div class="vendedor-info">
-                        <strong>Guilherme</strong>
-                        <span>Atendimento Especializado</span>
-                    </div>
-                    <i class="fa-brands fa-whatsapp wpp-icon"></i>
-                </a>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- RODAPÉ -->
     <footer class="footer">
