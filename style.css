@@ -236,7 +236,7 @@ body {
 .dropdown-menu:hover .dropdown-content { display: block; }
 
 /* TAG PRÉ-VENDA NO NAV */
-.nav-tag-prevenda {
+.nav-tag-lancamento {
     background: var(--accent);
     color: #fff !important;
     font-weight: 700 !important;
@@ -245,7 +245,7 @@ body {
     font-size: 12px !important;
 }
 
-.nav-tag-prevenda:hover {
+.nav-tag-lancamento:hover {
     background: var(--accent-hover);
     color: #fff !important;
 }
@@ -514,19 +514,19 @@ body {
 }
 
 /* Card pré-venda full width */
-.card-prevenda-full {
+.card-destaque-full {
     grid-column: 1 / -1 !important;
     background: #fff;
     border: 1.5px solid rgba(0,113,227,0.3);
     box-shadow: 0 6px 24px rgba(0,113,227,0.1);
 }
 
-.card-prevenda-full:hover {
+.card-destaque-full:hover {
     border-color: rgba(0,113,227,0.6);
     box-shadow: 0 14px 40px rgba(0,113,227,0.15);
 }
 
-.prevenda-card-body {
+.destaque-card-body {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 40px;
@@ -1109,11 +1109,11 @@ body {
 }
 
 @media (max-width: 800px) {
-    .prevenda-card-body {
+    .destaque-card-body {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    .prevenda-card-body .cores-container { justify-content: center; }
+    .destaque-card-body .cores-container { justify-content: center; }
     .grade-produtos-destaque { grid-template-columns: 1fr 1fr; }
     .grade-produtos-dois { grid-template-columns: 1fr 1fr; }
 }
