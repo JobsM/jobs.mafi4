@@ -62,28 +62,34 @@
 
     <main>
 
-                <!-- HERO -->
-        <section class="hero-sec" id="hero">
-            <div class="hero-inner">
-                <div class="hero-copy">
-                    <span class="hero-eyebrow">Lançamento 2026</span>
-                    <h2 class="hero-title">iPhone 18 Pro Max.</h2>
-                    <p class="hero-text">
-                        Titânio, câmera de 50 MP e o chip mais rápido que a Apple já fez.
-                        Lacrado, com nota fiscal e garantia da loja.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="hero-btn" href="https://wa.me/5548984023936?text=Tenho%20interesse%20no%20iPhone%2018%20Pro%20Max.%20Ainda%20est%C3%A1%20dispon%C3%ADvel%3F" target="_blank" rel="noopener noreferrer">Comprar agora</a>
-                        <a class="hero-btn hero-btn--ghost" href="catalogo.html">Ver catálogo</a>
-                    </div>
-                    <ul class="hero-facts">
-                        <li>Lacrado e com nota</li>
-                        <li>Garantia da loja</li>
-                        <li>Entrega para todo o Brasil</li>
-                    </ul>
+        <!-- ============================
+             APPLE HERO INTERACTIVE (SCROLL FRAME SWAP + COLOR SELECTOR)
+             ============================ -->
+        <section class="apple-hero-scroll-track" id="apple-hero-track">
+            <div class="apple-hero-sticky-stage">
+                <div class="apple-hero-header">
+                    <span class="apple-hero-badge">Lançamento Exclusivo 2026</span>
+                    <h2 class="apple-hero-headline">iPhone 18 Pro Max.</h2>
+                    <p class="apple-hero-sub">Engenharia em Titânio. Performance sem limites.</p>
                 </div>
-                <div class="hero-art">
-                    <img src="./img/hero-iphone18-dark-cherry.webp" alt="iPhone 18 Pro Max em titânio dark cherry, visto de costas com o módulo de três câmeras" width="1254" height="1254" fetchpriority="high">
+
+                <div class="apple-frame-viewport">
+                    <img src="./img/hero-iphone18-dark-cherry.webp" alt="iPhone 18 Pro Max Frame 1" class="apple-product-frame active-frame" id="hero-frame-1">
+                    <img src="./img/banner-iphone18-camera-close.png" alt="iPhone 18 Pro Max Frame 2" class="apple-product-frame" id="hero-frame-2">
+                    <img src="./img/herobanner-iphone18pro.webp" alt="iPhone 18 Pro Max Frame 3" class="apple-product-frame" id="hero-frame-3">
+                </div>
+
+                <div class="apple-hero-controls">
+                    <span class="color-picker-label">Selecione o acabamento:</span>
+                    <div class="color-swatch-group">
+                        <button class="color-swatch selected" style="background-color: #5c1b2a;" title="Dark Cherry" onclick="selecionarCorAppleHero(this, './img/hero-iphone18-dark-cherry.webp', 'Dark Cherry')"></button>
+                        <button class="color-swatch" style="background-color: #9dc3dc;" title="Light Blue" onclick="selecionarCorAppleHero(this, './img/cor-light-blue.webp', 'Light Blue')"></button>
+                        <button class="color-swatch" style="background-color: #3f4144;" title="Dark Gray" onclick="selecionarCorAppleHero(this, './img/cor-dark-gray.webp', 'Dark Gray')"></button>
+                        <button class="color-swatch" style="background-color: #d1d1cf;" title="Silver" onclick="selecionarCorAppleHero(this, './img/cor-silver.webp', 'Silver')"></button>
+                    </div>
+                    <div class="apple-hero-cta">
+                        <a href="https://wa.me/5548984023936?text=Tenho%20interesse%20no%20iPhone%2018%20Pro%20Max.%20Ainda%20est%C3%A1%20dispon%C3%ADvel%3F" class="btn-apple-primary">Comprar agora &rsaquo;</a>
+                    </div>
                 </div>
             </div>
         </section>
