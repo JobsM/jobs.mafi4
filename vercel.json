@@ -36,7 +36,5 @@
       "destination": "/",
       "permanent": false
     }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
