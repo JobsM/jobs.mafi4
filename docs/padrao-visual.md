@@ -57,3 +57,16 @@ Proibidos na interface. Nenhum 🔥 ⚡ ✨ 📲 🚫 em título, botão, badge 
 - Grade de produtos: 4 → 3 → 2 → 1 coluna.
 - Toda imagem com `aspect-ratio` fixo para não gerar layout shift (CLS).
 - Alvo de toque mínimo: 44 × 44 px.
+
+## 7. Capa de produto: branco ou transparente?
+
+**Regra: fundo branco `#FFFFFF`.**
+
+Motivo: a página, o card e a imagem ficam todos no mesmo branco, então o produto parece
+flutuar sem moldura visível. É o padrão da Apple e o que dá menos problema.
+
+- Use **transparente** só se a imagem for sobre fundo escuro (hero, banner, seção preta).
+- Se gerar transparente, o arquivo precisa ser WebP com **canal alpha real** e borda limpa —
+  sem halo branco, sem serrilhado.
+- Nunca misture: no mesmo catálogo, todas as capas com o mesmo fundo.
+- O CSS do card **não deve** ter fundo diferente de `#FFFFFF`, senão o recorte aparece.
