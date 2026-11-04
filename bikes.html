@@ -34,6 +34,9 @@
         .b-selo { position: absolute; top: 12px; left: 12px; z-index: 1; background: #1d1d1f; color: #ffffff; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 9px; border-radius: 6px; }
         @media (max-width: 900px) { .b-grade { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .b-grade { grid-template-columns: 1fr; } .b-hero { padding: 40px 0 28px; } }
+            .is-esgotado .b-img { opacity: 0.55; }
+        .b-selo--out { background: #ffffff; color: #1d1d1f; border: 1px solid #d2d2d7; }
+        .oficina-hero { display: flex; align-items: center; gap: 9px; margin-top: 14px; font-size: 14px; color: #86868b; }
     </style>
 </head>
 <body>
@@ -63,6 +66,7 @@
         <div class="b-hero">
             <h1>Bikes elétricas selecionadas</h1>
             <p>Motor de 750 W a 1000 W, bateria de lítio removível e freio a disco. Todas entregues montadas, testadas e com garantia da loja.</p>
+            <p class="oficina-hero"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Montagem, revisão e garantia na nossa oficina própria.</p>
         </div>
 
         <div class="b-grade">
@@ -84,9 +88,8 @@
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
-                <a class="b-card" href="v35.html">
-                    
-                    <span class="b-img"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></span>
+                <a class="b-card is-esgotado" href="v35.html">
+                    <span class="b-selo b-selo--out">Esgotado</span><span class="b-img"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></span>
                     <span class="b-body">
                         <span class="b-nome">V35</span>
                         <span class="b-sub">1000 W · suspensão reforçada</span>
@@ -102,9 +105,8 @@
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
-                <a class="b-card" href="v9-max.html">
-                    
-                    <span class="b-img"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></span>
+                <a class="b-card is-esgotado" href="v9-max.html">
+                    <span class="b-selo b-selo--out">Esgotado</span><span class="b-img"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></span>
                     <span class="b-body">
                         <span class="b-nome">V9 Max</span>
                         <span class="b-sub">1000 W · pneus largos</span>
@@ -120,9 +122,8 @@
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
-                <a class="b-card" href="x30.html">
-                    
-                    <span class="b-img"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></span>
+                <a class="b-card is-esgotado" href="x30.html">
+                    <span class="b-selo b-selo--out">Esgotado</span><span class="b-img"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></span>
                     <span class="b-body">
                         <span class="b-nome">X30</span>
                         <span class="b-sub">1000 W · rodas largas</span>
