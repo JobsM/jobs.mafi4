@@ -1,87 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikes elétricas | Steve Jobs Imports</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="produto-style.css">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-
+    <meta name="description" content="Bikes elétricas importadas com motor de 750 W a 1000 W, bateria de lítio, freio a disco e entrega montada. Conheça os modelos disponíveis.">
+    <link rel="canonical" href="https://stevemobile.com.br/bikes.html">
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Bikes elétricas | Steve Jobs Imports">
+    <meta property="og:description" content="Bikes elétricas importadas com motor de 750 W a 1000 W, bateria de lítio, freio a disco e entrega montada. Conheça os modelos disponíveis.">
+    <meta property="og:image" content="https://stevemobile.com.br/img/d50-cross-1.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos Exclusivos para a Página de Catálogo de Bikes */
-        .bikes-hero {
-            background: linear-gradient(135deg, #000000, #1a1a1c);
-            padding: 60px 20px;
-            text-align: center;
-            color: #fff;
-            margin-bottom: 40px;
-            border-bottom: 5px solid #25D366;
-        }
-
-        .bikes-hero h1 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .bikes-hero p {
-            font-size: 18px;
-            color: #b4b4b4;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Usar a vitrine mas mais limpa */
-        .grade-bikes {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 80px auto;
-            padding: 0 20px;
-        }
-
-        /* Padronizando botão do card para acionar o WhatsApp Modal */
-        .btn-wpp-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #02e245, #00bfa5);
-            color: white;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        .btn-wpp-card:hover {
-            transform: scale(1.02);
-        }
-
-        .btn-detalhes {
-            background: #000;
-        }
+        .b-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px 80px; }
+        .b-hero { padding: 64px 0 40px; max-width: 720px; }
+        .b-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); letter-spacing: -0.03em; line-height: 1.05; color: #1d1d1f; margin-bottom: 16px; }
+        .b-hero p { font-size: 17px; line-height: 1.6; color: #6e6e73; }
+        .b-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .b-card { position: relative; display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; }
+        .b-card:hover { border-color: #1d1d1f; transform: translateY(-2px); }
+        .b-img { background: #ffffff; padding: 24px; }
+        .b-img img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: contain; }
+        .b-body { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px 22px; border-top: 1px solid #e5e5e5; }
+        .b-nome { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #1d1d1f; }
+        .b-sub { font-size: 14px; color: #6e6e73; }
+        .b-link { margin-top: 8px; font-size: 14px; font-weight: 600; color: #1d1d1f; }
+        .b-selo { position: absolute; top: 12px; left: 12px; z-index: 1; background: #1d1d1f; color: #ffffff; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 9px; border-radius: 6px; }
+        @media (max-width: 900px) { .b-grade { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .b-grade { grid-template-columns: 1fr; } .b-hero { padding: 40px 0 28px; } }
     </style>
 </head>
-
 <body>
-
     <header id="header">
         <div class="header-top">
             <div class="logo-container">
@@ -90,193 +45,107 @@
                 </a>
             </div>
             <div class="search-box">
-                <input type="text" id="input-busca" placeholder="Buscar bikes..." aria-label="Buscar">
+                <input type="text" id="input-busca" placeholder="Buscar..." aria-label="Buscar">
                 <button class="search-btn" aria-label="Pesquisar">
                     <img id="search-icon" src="./img/search-icon.webp" alt="Buscar">
                 </button>
             </div>
         </div>
-
         <nav class="header-bottom">
             <a href="index.html">Início</a>
-            <a href="catalogo.html">Catálogo Completo</a>
+            <a href="bikes.html">Bikes</a>
+            <a href="catalogo.html">Catálogo</a>
             <a href="https://wa.me/5548984023936" target="_blank" rel="noopener noreferrer">Contato</a>
         </nav>
     </header>
 
-    <main>
-        <!-- ============================
-             HERO BIKES ELÉTRICAS
-             ============================ -->
-        <section class="bikes-hero">
-            <h1>Bikes Elétricas Selecionadas</h1>
-            <p>Conheça as bikes elétricas selecionadas pela nossa loja, com o melhor custo-benefício, potência e autonomia.</p>
-        </section>
+    <main class="b-wrap">
+        <div class="b-hero">
+            <h1>Bikes elétricas selecionadas</h1>
+            <p>Motor de 750 W a 1000 W, bateria de lítio removível e freio a disco. Todas entregues montadas, testadas e com garantia da loja.</p>
+        </div>
 
-        <!-- ============================
-             SEÇÃO BIKES ELÉTRICAS
-             ============================ -->
-        <section class="section-bikes-afiliados" id="bikes-afiliados" style="padding-top: 10px;">
-            <div class="section-editorial">
-                <div class="bikes-grid">
-                    <!-- Bike 1: Atrio Miami 350W -->
+        <div class="b-grade">
+                <a class="b-card" href="d50-cross.html">
+                    <span class="b-selo">Novo</span>
+                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="Bike elétrica D50 Cross" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">D50 Cross</span>
+                        <span class="b-sub">1000 W · até 60 km · alarme</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="x50-pro.html">
                     
-
-                    <!-- Bike 2: Sousa 350W -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
-                        <div class="img-bike-container">
-                            <img src="./img/v10max1000w.webp" alt="Sousa 350W" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Sousa 48V com Cesta</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.6</span> (1.000+ vendas)
-                            </div>
-                            <div class="price-bike">R$ 3.890,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-
-                    <!-- Bike 3: Honey Whale S6S -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-custo-beneficio">&check; Melhor Custo-Benefício</span>
-                        <div class="img-bike-container">
-                            <img src="./img/v20mini.webp" alt="Honey Whale S6S 750W" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Honey Whale S6S Dobrável</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.8</span> (300+ vendas)
-                            </div>
-                            <div class="price-bike">R$ 4.399,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-
-                    <!-- Bike 4: Dropp Joy City 500W -->
+                    <span class="b-img"><img src="./img/x50pro1000w.webp" alt="Bike elétrica X50 Pro" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">X50 Pro</span>
+                        <span class="b-sub">1000 W · freio hidráulico</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="v35.html">
                     
-
+                    <span class="b-img"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V35</span>
+                        <span class="b-sub">1000 W · suspensão reforçada</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="v40.html">
                     
-
+                    <span class="b-img"><img src="./img/v40pro.webp" alt="Bike elétrica V40 Pro" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V40 Pro</span>
+                        <span class="b-sub">1000 W · bateria de alta capacidade</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="v9-max.html">
                     
-
-                    <!-- Bike 7: Sousa 1000W -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
-                        <div class="img-bike-container">
-                            <img src="./img/v8ultra1000w.webp" alt="Sousa 1000W" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Sousa Heavy Duty</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.7</span> (800+ vendas)
-                            </div>
-                            <div class="price-bike">R$ 5.990,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-
-                    <!-- Bike 8: Inow V20 -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
-                        <div class="img-bike-container">
-                            <img src="./img/v35.webp" alt="Inow V20 750W" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Inow V20 / V35 Fat Bike</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.8</span> (Alta Performance)
-                            </div>
-                            <div class="price-bike">R$ 6.490,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-
-                    <!-- Bike 9: Caloi E-Vibe -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
-                        <div class="img-bike-container">
-                            <img src="./img/v40pro.webp" alt="Caloi E-Vibe City Tour" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Caloi E-Vibe City Tour Shimano</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.9</span> (Motor Shimano)
-                            </div>
-                            <div class="price-bike">R$ 7.499,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-
-                    <!-- Bike 10: Sense Fun E-Act -->
-                    <article class="card-bike-afiliado reveal">
-                        <span class="badge-mais-vendido">&star; Mais Vendido</span>
-                        <div class="img-bike-container">
-                            <img src="./img/x50pro1000w.webp" alt="Sense Fun E-Act 250W" loading="lazy">
-                        </div>
-                        <div>
-                            <h3 class="title-bike">Sense Fun E-Act Shimano</h3>
-                            <div class="rating-bike">
-                                <span class="rating-stars">&starf;&starf;&starf;&starf;&starf; 4.9</span> (High-End)
-                            </div>
-                            <div class="price-bike">R$ 7.990,00</div>
-                        </div>
-                        <a href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20a%20disponibilidade%20e%20o%20pre%C3%A7o%20desta%20bike." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bike">Consultar no WhatsApp</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    <span class="b-img"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V9 Max</span>
+                        <span class="b-sub">1000 W · pneus largos</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="v20-mini.html">
+                    
+                    <span class="b-img"><img src="./img/v20mini.webp" alt="Bike elétrica V20 Mini" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V20 Mini</span>
+                        <span class="b-sub">750 W · quadro compacto</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+                <a class="b-card" href="x30.html">
+                    
+                    <span class="b-img"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></span>
+                    <span class="b-body">
+                        <span class="b-nome">X30</span>
+                        <span class="b-sub">1000 W · rodas largas</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+        </div>
     </main>
 
-    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-social-links" style="display: flex; justify-content: center; gap: 25px; margin-bottom: 15px;">
-                <a href="https://www.tiktok.com/@stevemobile" target="_blank" rel="noopener noreferrer" style="color: #ccc; font-size: 24px; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#ccc'"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" style="color: #ccc; font-size: 24px; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#ccc'"><i class="fa-brands fa-instagram"></i></a>
+            <div class="footer-social-links">
+                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
-            <div class="footer-bottom" style="text-align: center;">
-                <p>© 2026 Steve Jobs Imports - Todos os direitos reservados.</p>
+            <div class="footer-bottom">
+                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Modal logic with dynamic product name for WhatsApp message
-        const modal = document.getElementById("modalVendedor");
-        const linkKerolen = document.getElementById("linkKerolen");
-        const linkGuilherme = document.getElementById("linkGuilherme");
-
-        function abrirModalVendedor(produtoNome) {
-            // Update links with specific product
-            const msgK = `Olá Kerolen, tenho interesse na ${produtoNome}, gostaria de tirar dúvidas ou comprar!`;
-            const msgG = `Olá Guilherme, tenho interesse na ${produtoNome}, gostaria de tirar dúvidas ou comprar!`;
-            
-            linkKerolen.href = `https://wa.me/5548984023936?text=${encodeURIComponent(msgK)}`;
-            linkGuilherme.href = `https://wa.me/5548984023936?text=${encodeURIComponent(msgG)}`;
-
-            modal.style.display = "flex";
-            setTimeout(() => {
-                modal.style.opacity = "1";
-            }, 10);
-        }
-
-        function fecharModalVendedor() {
-            modal.style.opacity = "0";
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                fecharModalVendedor();
-            }
-        }
-    </script>
-    <a href="https://wa.me/5548984023936?text=Olá,%20gostaria%20de%20saber%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Fale conosco via WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
 </body>
 </html>
