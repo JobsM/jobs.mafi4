@@ -46,6 +46,10 @@
         .p-table th, .p-table td { text-align: left; padding: 14px 0; border-bottom: 1px solid #e5e5e5; }
         .p-table th { width: 42%; color: #6e6e73; font-weight: 500; }
         @media (max-width: 900px) {
+            .p-main img { aspect-ratio: 16 / 10; max-height: 46vh; }
+            .p-thumbs { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+            .p-grid { margin-top: 16px; }
+            .p-wrap { padding-bottom: 40px; }
             .p-grid { grid-template-columns: 1fr; gap: 28px; }
             .p-gallery { position: static; }
         }

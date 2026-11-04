@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /arquivo/
-
-Sitemap: https://stevemobile.com.br/sitemap.xml
+Disallow: /
