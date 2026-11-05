@@ -9,7 +9,7 @@
     <meta property="og:type" content="product">
     <meta property="og:title" content="X50 Pro Action | Steve Jobs Imports">
     <meta property="og:description" content="X50 Pro Action: potência 1000 W, autonomia até 70 km, banco para 2 pessoas, farol e painel LED e digital, trava na roda e alarme sim.">
-    <meta property="og:image" content="https://stevemobile.com.br/img/x50action.webp">
+    <meta property="og:image" content="https://stevemobile.com.br/img/x50-action-1.webp">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
         .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 24px; }
         .p-main { background: #fff; border: 1px solid #e5e5e5; border-radius: 18px; overflow: hidden; }
         .p-main img { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: contain; background: #fff; }
-        .p-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+        .p-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 10px; }
         .p-thumbs button { padding: 0; border: 1px solid #e5e5e5; border-radius: 10px; background: #fff; cursor: pointer; overflow: hidden; }
         .p-thumbs button.is-active { border-color: #1d1d1f; }
         .p-thumbs img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; }
@@ -82,16 +82,22 @@
         <div class="p-grid">
             <div class="p-gallery">
                 <div class="p-main">
-                    <img id="foto-principal" src="./img/x50action.webp" alt="X50 Pro Action — vista lateral" width="1200" height="900">
+                    <img id="foto-principal" src="./img/x50-action-1.webp" alt="X50 Pro Action — vista lateral" width="1200" height="900">
                 </div>
                 <div class="p-thumbs" role="group" aria-label="Fotos da X50 Pro Action">
-                    <button type="button" class="is-active" aria-label="Foto 1" onclick="trocarFoto(this, './img/x50action.webp')">
+                    <button type="button" class="is-active" aria-label="Foto 1" onclick="trocarFoto(this, './img/x50-action-1.webp')">
+                        <img src="./img/x50-action-1.webp" alt="X50 Pro Action — vista frontal" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 2" onclick="trocarFoto(this, './img/x50-action-2.webp')">
+                        <img src="./img/x50-action-2.webp" alt="X50 Pro Action" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 3" onclick="trocarFoto(this, './img/x50action.webp')">
                         <img src="./img/x50action.webp" alt="X50 Pro Action — vista lateral" loading="lazy">
                     </button>
-                    <button type="button" aria-label="Foto 2" onclick="trocarFoto(this, './img/x50action-photo-show.webp')">
+                    <button type="button" aria-label="Foto 4" onclick="trocarFoto(this, './img/x50action-photo-show.webp')">
                         <img src="./img/x50action-photo-show.webp" alt="X50 Pro Action em uso" loading="lazy">
                     </button>
-                    <button type="button" aria-label="Foto 3" onclick="trocarFoto(this, './img/x50action-boxes.webp')">
+                    <button type="button" aria-label="Foto 5" onclick="trocarFoto(this, './img/x50action-boxes.webp')">
                         <img src="./img/x50action-boxes.webp" alt="X50 Pro Action na caixa" loading="lazy">
                     </button>
                 </div>
