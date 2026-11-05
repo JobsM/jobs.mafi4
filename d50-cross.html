@@ -26,7 +26,7 @@
         .p-gallery { position: sticky; top: 24px; }
         .p-main { background: #ffffff; border: 1px solid #e5e5e5; border-radius: 18px; overflow: hidden; }
         .p-main img { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: contain; background: #ffffff; }
-        .p-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+        .p-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
         .p-thumbs button { padding: 0; border: 1px solid #e5e5e5; border-radius: 12px; background: #ffffff; cursor: pointer; overflow: hidden; }
         .p-thumbs button.is-active { border-color: #1d1d1f; }
         .p-thumbs img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #ffffff; }
@@ -97,6 +97,9 @@
                     </button>
                     <button type="button" aria-label="Foto 3" onclick="trocarFoto(this, './img/d50-cross-3.webp')">
                         <img src="./img/d50-cross-3.webp" alt="D50 Cross foto 3" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 4" onclick="trocarFoto(this, './img/d50-cross-4.webp')">
+                        <img src="./img/d50-cross-4.webp" alt="D50 Cross foto 4" loading="lazy">
                     </button>
                 </div>
             </div>
