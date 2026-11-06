@@ -9,6 +9,7 @@
     <meta property="og:type" content="product">
     <meta property="og:title" content="Scooter S20 Pro | Steve Jobs Imports">
     <meta property="og:description" content="Scooter S20 Pro: potência 1000 W, autonomia até 90 km, banco para 2 pessoas, farol e painel LED e digital.">
+    <meta property="og:image" content="https://stevemobile.com.br/img/scooter-s20-pro-1.webp">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,23 +18,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .p-wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 72px; }
+        .p-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px 64px; }
         .p-breadcrumb { font-size: 13px; color: #86868b; padding: 22px 0 0; }
         .p-breadcrumb a { color: #86868b; text-decoration: none; }
-        .p-breadcrumb a:hover { color: #1d1d1f; }
-        .p-head { margin-top: 28px; }
+        .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 24px; }
+        .p-main { background: #fff; border: 1px solid #e5e5e5; border-radius: 18px; overflow: hidden; }
+        .p-main img { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: contain; background: #fff; }
+        .p-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+        .p-thumbs button { padding: 0; border: 1px solid #e5e5e5; border-radius: 10px; background: #fff; cursor: pointer; overflow: hidden; }
+        .p-thumbs button.is-active { border-color: #1d1d1f; }
+        .p-thumbs img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; }
         .p-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #86868b; font-weight: 600; }
-        .p-head h1 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -0.03em; margin: 10px 0 6px; color: #1d1d1f; }
-        .p-specs { list-style: none; margin: 24px 0; padding: 0; border-top: 1px solid #e5e5e5; }
-        .p-specs li { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid #e5e5e5; font-size: 15px; }
+        .p-info h1 { font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -0.03em; margin: 10px 0 12px; color: #1d1d1f; }
+        .p-specs { list-style: none; margin: 8px 0 24px; padding: 0; border-top: 1px solid #e5e5e5; }
+        .p-specs li { display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; border-bottom: 1px solid #e5e5e5; font-size: 15px; }
         .p-specs span:first-child { color: #6e6e73; }
         .p-specs span:last-child { color: #1d1d1f; font-weight: 600; text-align: right; }
         .p-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #1d1d1f; color: #fff; text-decoration: none; padding: 15px 26px; border-radius: 12px; font-weight: 600; font-size: 15px; width: 100%; }
         .p-cta:hover { background: #000; }
         .p-note { margin-top: 16px; font-size: 13px; color: #86868b; line-height: 1.6; }
-        @media (max-width: 600px) {
-            .p-specs li { font-size: 14px; }
-            .p-wrap { padding-bottom: 48px; }
+        @media (max-width: 900px) {
+            .p-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 16px; }
+            .p-main img { aspect-ratio: 16 / 10; max-height: 40vh; }
+            .p-thumbs { gap: 8px; }
+            .p-wrap { padding-bottom: 40px; }
         }
     </style>
 </head>
@@ -65,24 +73,43 @@
             <a href="index.html">Início</a> / <a href="bikes.html">Bikes e scooters</a> / <span>Scooter S20 Pro</span>
         </div>
 
-        <div class="p-head">
-            <span class="p-eyebrow">Scooter elétrica</span>
-            <h1>Scooter S20 Pro</h1>
+        <div class="p-grid">
+            <div class="p-gallery">
+                <div class="p-main">
+                    <img id="foto-principal" src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" width="1200" height="900">
+                </div>
+                <div class="p-thumbs" role="group" aria-label="Fotos da Scooter S20 Pro">
+                    <button type="button" class="is-active" aria-label="Foto 1" onclick="trocarFoto(this, './img/scooter-s20-pro-1.webp')">
+                        <img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro — foto 1" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 2" onclick="trocarFoto(this, './img/scooter-s20-pro-2.webp')">
+                        <img src="./img/scooter-s20-pro-2.webp" alt="Scooter S20 Pro — foto 2" loading="lazy">
+                    </button>
+                    <button type="button" aria-label="Foto 3" onclick="trocarFoto(this, './img/scooter-s20-pro-3.webp')">
+                        <img src="./img/scooter-s20-pro-3.webp" alt="Scooter S20 Pro — foto 3" loading="lazy">
+                    </button>
+                </div>
+            </div>
 
-            <ul class="p-specs">
+            <div class="p-info">
+                <span class="p-eyebrow">Scooter elétrica</span>
+                <h1>Scooter S20 Pro</h1>
+
+                <ul class="p-specs">
                     <li><span>Potência</span><span>1000 W</span></li>
                     <li><span>Autonomia</span><span>até 90 km</span></li>
                     <li><span>Banco</span><span>para 2 pessoas</span></li>
                     <li><span>Farol e painel</span><span>LED e digital</span></li>
-            </ul>
+                </ul>
 
-            <a class="p-cta" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20o%20pre%C3%A7o%20e%20a%20disponibilidade%20da%20Scooter%20S20%20Pro." target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar preço no WhatsApp
-            </a>
+                <a class="p-cta" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Quero%20saber%20o%20pre%C3%A7o%20e%20a%20disponibilidade%20da%20Scooter%20S20%20Pro." target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar preço no WhatsApp
+                </a>
 
-            <p class="p-note">
-                Entrega montada e testada na nossa oficina própria. Garantia da loja e suporte no WhatsApp.
-            </p>
+                <p class="p-note">
+                    Entrega montada e testada na nossa oficina própria. Garantia da loja e suporte no WhatsApp.
+                </p>
+            </div>
         </div>
     </main>
 
@@ -101,5 +128,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function trocarFoto(botao, src) {
+            document.getElementById('foto-principal').src = src;
+            document.querySelectorAll('.p-thumbs button').forEach(function (b) {
+                b.classList.remove('is-active');
+            });
+            botao.classList.add('is-active');
+        }
+    </script>
 </body>
 </html>
