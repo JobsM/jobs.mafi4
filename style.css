@@ -1595,3 +1595,29 @@ body {
     .hero-text { font-size: 15px; }
     .hero-btn { width: 100%; }
 }
+
+/* banner: imagem colada na linha inferior */
+.hero-inner {
+    padding-bottom: 0;
+    align-items: end;
+}
+.hero-copy {
+    align-self: center;
+    padding-bottom: 0;
+}
+.hero-media {
+    align-self: end;
+    line-height: 0;
+}
+.hero-media img {
+    display: block;
+    border-radius: 0;
+}
+@media (max-width: 860px) {
+    .hero-inner {
+        padding: 28px 16px 28px;
+        align-items: stretch;
+    }
+    .hero-copy { padding-bottom: 0; }
+    .hero-media img { border-radius: 16px; }
+}
