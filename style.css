@@ -567,7 +567,7 @@ body {
     transition: transform 0.6s var(--transition);
 }
 
-.card-produto:hover .img-container img { transform: scale(1.06); }
+.card-produto:hover .img-container img { transform: scale(1.015); }
 
 /* TÍTULO */
 .titulo-produto {
@@ -1408,7 +1408,7 @@ body {
 }
 
 .card-bike-afiliado:hover .img-bike-container img {
-    transform: scale(1.05);
+    transform: scale(1.015);
 }
 
 .title-bike {
@@ -1482,3 +1482,34 @@ body {
 /* cabeçalho do catálogo: ordem e alinhamento */
 .catalogo-header .catalogo-sub { margin-bottom: 10px; }
 .catalogo-header .oficina-line { display: inline-flex; margin: 0 auto 40px; }
+
+/* banner: uma imagem */
+.apple-hero-scroll-track {
+    height: auto;
+    min-height: 0;
+}
+.apple-hero-sticky-stage {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 72px 20px 56px;
+    gap: 24px;
+}
+.apple-frame-viewport {
+    height: auto;
+    max-height: 420px;
+}
+.apple-product-frame {
+    position: relative;
+    height: auto;
+    max-height: 420px;
+    opacity: 1;
+    transform: none;
+}
+.apple-hero-controls {
+    margin-top: 8px;
+}
+@media (max-width: 900px) {
+    .apple-hero-sticky-stage { padding: 40px 16px 32px; }
+    .apple-frame-viewport, .apple-product-frame { max-height: 300px; }
+}
