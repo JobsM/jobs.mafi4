@@ -1621,3 +1621,18 @@ body {
     .hero-copy { padding-bottom: 0; }
     .hero-media img { border-radius: 16px; }
 }
+/* fecho de oficina */
+.oficina-fim {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 24px 20px 56px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #6e6e73;
+    border-top: 1px solid #e5e5e5;
+}
+@media (max-width: 600px) {
+    .oficina-fim { padding: 20px 16px 40px; font-size: 13px; }
+}

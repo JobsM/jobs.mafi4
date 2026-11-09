@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikes elétricas | Steve Jobs Imports</title>
-    <meta name="description" content="Bikes elétricas importadas com motor de 750 W a 1000 W, bateria de lítio, freio a disco e entrega montada. Conheça os modelos disponíveis.">
+    <meta name="description" content="Bikes, scooters e triciclos elétricos com oficina própria, garantia de 1 ano e parcelamento em até 24x. Modelos que não precisam de CNH nem emplacamento.">
     <link rel="canonical" href="https://stevemobile.com.br/bikes.html">
-    <meta property="og:type" content="product">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Bikes elétricas | Steve Jobs Imports">
-    <meta property="og:description" content="Bikes elétricas importadas com motor de 750 W a 1000 W, bateria de lítio, freio a disco e entrega montada. Conheça os modelos disponíveis.">
-    <meta property="og:image" content="https://stevemobile.com.br/img/d50-cross-1.webp">
+    <meta property="og:description" content="Bikes, scooters e triciclos elétricos com oficina própria e garantia de 1 ano.">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,31 +17,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .b-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px 80px; }
-        .b-hero { padding: 64px 0 40px; max-width: 720px; }
+        .b-wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px 40px; }
+        .b-hero { padding: 64px 0 40px; max-width: 640px; }
         .b-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); letter-spacing: -0.03em; line-height: 1.05; color: #1d1d1f; margin-bottom: 16px; }
         .b-hero p { font-size: 17px; line-height: 1.6; color: #6e6e73; }
         .b-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .b-card { position: relative; display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; }
+        .b-card {
+            position: relative; display: flex; flex-direction: column;
+            background: #fff; border: 1px solid #e5e5e5; border-radius: 16px;
+            overflow: hidden; text-decoration: none; color: inherit;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
         .b-card:hover { border-color: #1d1d1f; transform: translateY(-2px); }
-        .b-img { background: #ffffff; padding: 24px; }
+        .b-img { background: #fff; padding: 24px; display: block; }
         .b-img img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: contain; }
         .b-body { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px 22px; border-top: 1px solid #e5e5e5; }
-        .b-nome { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #1d1d1f; }
+        .b-nome { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #1d1d1f; text-decoration: none; }
         .b-sub { font-size: 14px; color: #6e6e73; }
-        .b-link { margin-top: 8px; font-size: 14px; font-weight: 600; color: #1d1d1f; }
-        .b-selo { position: absolute; top: 12px; left: 12px; z-index: 1; background: #1d1d1f; color: #ffffff; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 9px; border-radius: 6px; }
-        @media (max-width: 900px) { .b-grade { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .b-grade { grid-template-columns: 1fr; } .b-hero { padding: 40px 0 28px; } }
-            .is-esgotado .b-img { opacity: 0.55; }
-        .b-selo--out { background: #ffffff; color: #1d1d1f; border: 1px solid #d2d2d7; }
-        .oficina-hero { display: flex; align-items: center; gap: 9px; margin-top: 14px; font-size: 14px; color: #86868b; }
-            .b-nome { text-decoration: none; }
-        .b-link--estoque { display: inline-block; text-decoration: none; border-bottom: 1px solid #d2d2d7; padding-bottom: 2px; }
+        .b-link { margin-top: 8px; font-size: 14px; font-weight: 600; color: #1d1d1f; text-decoration: none; }
+        .b-link--estoque { display: inline-block; border-bottom: 1px solid #d2d2d7; padding-bottom: 2px; align-self: flex-start; }
         .b-link--estoque:hover { border-color: #1d1d1f; }
+        .b-selo {
+            position: absolute; top: 12px; left: 12px; z-index: 1;
+            background: #1d1d1f; color: #fff; font-size: 11px;
+            letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 9px; border-radius: 6px;
+        }
+        .b-selo--out { background: #fff; color: #1d1d1f; border: 1px solid #d2d2d7; }
+        .is-esgotado .b-img img { opacity: 0.55; }
+        .oficina-fim {
+            max-width: 1160px; margin: 0 auto; padding: 24px 20px 56px;
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: #6e6e73; border-top: 1px solid #e5e5e5;
+        }
+        @media (max-width: 900px) { .b-grade { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) {
+            .b-grade { grid-template-columns: 1fr; }
+            .b-hero { padding: 40px 0 28px; }
+            .oficina-fim { padding: 20px 16px 40px; font-size: 13px; }
+        }
     </style>
 </head>
 <body>
+
     <header id="header">
         <div class="header-top">
             <div class="logo-container">
@@ -68,8 +84,7 @@
     <main class="b-wrap">
         <div class="b-hero">
             <h1>Menos esforço. Mais caminho.</h1>
-            <p>Bikes elétricas montadas, testadas e entregues prontas para pedalar, com suporte direto com a gente.</p>
-            <p class="oficina-hero"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Montagem, revisão e garantia na nossa oficina própria.</p>
+            <p>Temos oficina própria especializada e peças de reposição.</p>
         </div>
 
         <div class="b-grade">
@@ -77,7 +92,7 @@
                     <span class="b-img"><img src="./img/v8-pro-1.webp" alt="V8 Pro" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">V8 Pro</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
+                        <span class="b-sub">1000 W · até 50 km</span>
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
@@ -86,13 +101,13 @@
                     <span class="b-img"><img src="./img/v8-pro-s-1.webp" alt="V8 Pro S" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">V8 Pro S</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
+                        <span class="b-sub">1000 W · até 120 km</span>
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
 
                 <a class="b-card" href="scooter-s20-pro.html">
-                    <span class="b-img"><img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" loading="lazy"></span>
+                    <span class="b-img"><img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">Scooter S20 Pro</span>
                         <span class="b-sub">1000 W · até 90 km</span>
@@ -100,17 +115,8 @@
                     </span>
                 </a>
 
-                <a class="b-card" href="scooter-n77.html">
-                    <span class="b-img"><img src="./img/scooter-n77-1.webp" alt="Scooter N77" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N77</span>
-                        <span class="b-sub">800 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
                 <a class="b-card" href="scooter-x18-plus.html">
-                    <span class="b-img"><img src="./img/scooter-x18-plus-2.webp" alt="Scooter X18 Plus" loading="lazy"></span>
+                    <span class="b-img"><img src="./img/scooter-x18-plus-2.webp" alt="Scooter X18 Plus" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">Scooter X18 Plus</span>
                         <span class="b-sub">1000 W · até 60 km</span>
@@ -118,8 +124,17 @@
                     </span>
                 </a>
 
+                <a class="b-card" href="scooter-n77.html">
+                    <span class="b-img"><img src="./img/scooter-n77-1.webp" alt="Scooter N77" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">Scooter N77</span>
+                        <span class="b-sub">800 W · até 60 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
                 <a class="b-card" href="scooter-n7.html">
-                    <span class="b-img"><img src="./img/scooter-n7-1.webp" alt="Scooter N7" loading="lazy"></span>
+                    <span class="b-img"><img src="./img/scooter-n7-1.webp" alt="Scooter N7" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">Scooter N7</span>
                         <span class="b-sub">1000 W · até 60 km</span>
@@ -127,8 +142,53 @@
                     </span>
                 </a>
 
+                <a class="b-card" href="scooter-x1.html">
+                    <span class="b-img"><img src="./img/scooter-x1-1.webp" alt="Scooter X1" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">Scooter X1</span>
+                        <span class="b-sub">1000 W · até 50 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
+                <a class="b-card" href="scooter-n5.html">
+                    <span class="b-img"><img src="./img/scooter-n5-1.webp" alt="Scooter N5" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">Scooter N5</span>
+                        <span class="b-sub">1000 W · até 50 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
+                <a class="b-card" href="d50-cross.html">
+                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="D50 Cross" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">D50 Cross</span>
+                        <span class="b-sub">1000 W · até 60 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
+                <a class="b-card" href="v15-sport.html">
+                    <span class="b-img"><img src="./img/v15-sport-1.webp" alt="V15 Sport" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V15 Sport</span>
+                        <span class="b-sub">1000 W · até 70 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
+                <a class="b-card" href="x50-action.html">
+                    <span class="b-img"><img src="./img/x50-action-1.webp" alt="X50 Pro Action" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">X50 Pro Action</span>
+                        <span class="b-sub">1000 W · até 70 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
                 <a class="b-card" href="triciclo-eletrico.html">
-                    <span class="b-img"><img src="./img/triciclo-eletrico-1.webp" alt="Triciclo Elétrico" loading="lazy"></span>
+                    <span class="b-img"><img src="./img/triciclo-eletrico-1.webp" alt="Triciclo Elétrico" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">Triciclo Elétrico</span>
                         <span class="b-sub">3 lugares · até 200 kg</span>
@@ -136,88 +196,47 @@
                     </span>
                 </a>
 
-                <a class="b-card" href="v15-sport.html">
-                    <span class="b-img"><img src="./img/v15-sport-1.webp" alt="V15 Sport" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V15 Sport</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="x50-action.html">
-                    <span class="b-img"><img src="./img/x50-action-1.webp" alt="X50 Pro Action" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">X50 Pro Action</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-x1.html">
-                    <span class="b-img"><img src="./img/scooter-x1-1.webp" alt="Scooter X1" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X1</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-n5.html">
-                    <span class="b-img"><img src="./img/scooter-n5-1.webp" alt="Scooter N5" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N5</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="d50-cross.html">
-                    <span class="b-selo">Novo</span>
-                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="Bike elétrica D50 Cross" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">D50 Cross</span>
-                        <span class="b-sub">1000 W · até 60 km · alarme</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v35.html"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v35.html">V35</a>
-                        <span class="b-sub">1000 W · suspensão reforçada</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V35%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
                 <a class="b-card" href="v40.html">
-                    
-                    <span class="b-img"><img src="./img/v40-1.webp" alt="Bike elétrica V40 Pro" loading="lazy"></span>
+                    <span class="b-img"><img src="./img/v40-1.webp" alt="V40 Pro" loading="lazy" width="400" height="400"></span>
                     <span class="b-body">
                         <span class="b-nome">V40 Pro</span>
                         <span class="b-sub">1000 W · bateria de alta capacidade</span>
                         <span class="b-link">Ver detalhes</span>
                     </span>
                 </a>
+
+                <a class="b-card" href="v20-mini.html">
+                    <span class="b-img"><img src="./img/v20-mini-1.webp" alt="V20 Mini" loading="lazy" width="400" height="400"></span>
+                    <span class="b-body">
+                        <span class="b-nome">V20 Mini</span>
+                        <span class="b-sub">750 W · até 50 km</span>
+                        <span class="b-link">Ver detalhes</span>
+                    </span>
+                </a>
+
                 <div class="b-card is-esgotado">
                     <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v9-max.html"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></a>
+                    <a class="b-img" href="v35.html"><img src="./img/v35.webp" alt="V35" loading="lazy" width="400" height="400"></a>
+                    <div class="b-body">
+                        <a class="b-nome" href="v35.html">V35</a>
+                        <span class="b-sub">1000 W · suspensão reforçada</span>
+                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V35%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
+                    </div>
+                </div>
+
+                <div class="b-card is-esgotado">
+                    <span class="b-selo b-selo--out">Esgotado</span>
+                    <a class="b-img" href="v9-max.html"><img src="./img/v9max.webp" alt="V9 Max" loading="lazy" width="400" height="400"></a>
                     <div class="b-body">
                         <a class="b-nome" href="v9-max.html">V9 Max</a>
                         <span class="b-sub">1000 W · pneus largos</span>
                         <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V9%20Max%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
                     </div>
                 </div>
-                <a class="b-card" href="v20-mini.html">
-                    
-                    <span class="b-img"><img src="./img/v20-mini-1.webp" alt="Bike elétrica V20 Mini" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V20 Mini</span>
-                        <span class="b-sub">750 W · quadro compacto</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
+
                 <div class="b-card is-esgotado">
                     <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="x30.html"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></a>
+                    <a class="b-img" href="x30.html"><img src="./img/x30inow.webp" alt="X30" loading="lazy" width="400" height="400"></a>
                     <div class="b-body">
                         <a class="b-nome" href="x30.html">X30</a>
                         <span class="b-sub">1000 W · rodas largas</span>
@@ -226,6 +245,8 @@
                 </div>
         </div>
     </main>
+
+    <p class="oficina-fim"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Temos oficina própria especializada e peças de reposição.</p>
 
     <footer class="footer">
         <div class="footer-container">
@@ -242,497 +263,6 @@
             </div>
         </div>
     </footer>
-</body>
-</html>href="v8-pro-s.html">
-                    <span class="b-img"><img src="./img/v8-pro-s-1.webp" alt="V8 Pro S" loading="lazy" width="400" height="400"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V8 Pro S</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
 
-                <a class="b-card" href="scooter-s20-pro.html">
-                    <span class="b-img"><img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter S20 Pro</span>
-                        <span class="b-sub">1000 W · até 90 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n77.html">
-                    <span class="b-img"><img src="./img/scooter-n77-1.webp" alt="Scooter N77" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N77</span>
-                        <span class="b-sub">800 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-x18-plus.html">
-                    <span class="b-img"><img src="./img/scooter-x18-plus-2.webp" alt="Scooter X18 Plus" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X18 Plus</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n7.html">
-                    <span class="b-img"><img src="./img/scooter-n7-1.webp" alt="Scooter N7" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N7</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="triciclo-eletrico.html">
-                    <span class="b-img"><img src="./img/triciclo-eletrico-1.webp" alt="Triciclo Elétrico" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Triciclo Elétrico</span>
-                        <span class="b-sub">3 lugares · até 200 kg</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="v15-sport.html">
-                    <span class="b-img"><img src="./img/v15-sport-1.webp" alt="V15 Sport" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V15 Sport</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="x50-action.html">
-                    <span class="b-img"><img src="./img/x50-action-1.webp" alt="X50 Pro Action" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">X50 Pro Action</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-x1.html">
-                    <span class="b-img"><img src="./img/scooter-x1-1.webp" alt="Scooter X1" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X1</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-n5.html">
-                    <span class="b-img"><img src="./img/scooter-n5-1.webp" alt="Scooter N5" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N5</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="d50-cross.html">
-                    <span class="b-selo">Novo</span>
-                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="Bike elétrica D50 Cross" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">D50 Cross</span>
-                        <span class="b-sub">1000 W · até 60 km · alarme</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v35.html"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v35.html">V35</a>
-                        <span class="b-sub">1000 W · suspensão reforçada</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V35%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v40.html">
-                    
-                    <span class="b-img"><img src="./img/v40-1.webp" alt="Bike elétrica V40 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V40 Pro</span>
-                        <span class="b-sub">1000 W · bateria de alta capacidade</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v9-max.html"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v9-max.html">V9 Max</a>
-                        <span class="b-sub">1000 W · pneus largos</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V9%20Max%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v20-mini.html">
-                    
-                    <span class="b-img"><img src="./img/v20-mini-1.webp" alt="Bike elétrica V20 Mini" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V20 Mini</span>
-                        <span class="b-sub">750 W · quadro compacto</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="x30.html"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="x30.html">X30</a>
-                        <span class="b-sub">1000 W · rodas largas</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20X30%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-social-links">
-                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>href="v8-pro.html">
-                    <span class="b-img"><img src="./img/v8-pro-1.webp" alt="V8 Pro" loading="lazy" width="400" height="400"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V8 Pro</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="v8-pro-s.html">
-                    <span class="b-img"><img src="./img/v8-pro-s-1.webp" alt="V8 Pro S" loading="lazy" width="400" height="400"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V8 Pro S</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-s20-pro.html">
-                    <span class="b-img"><img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter S20 Pro</span>
-                        <span class="b-sub">1000 W · até 90 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n77.html">
-                    <span class="b-img"><img src="./img/scooter-n77-1.webp" alt="Scooter N77" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N77</span>
-                        <span class="b-sub">800 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-x18-plus.html">
-                    <span class="b-img"><img src="./img/scooter-x18-plus-2.webp" alt="Scooter X18 Plus" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X18 Plus</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n7.html">
-                    <span class="b-img"><img src="./img/scooter-n7-1.webp" alt="Scooter N7" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N7</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="triciclo-eletrico.html">
-                    <span class="b-img"><img src="./img/triciclo-eletrico-1.webp" alt="Triciclo Elétrico" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Triciclo Elétrico</span>
-                        <span class="b-sub">3 lugares · até 200 kg</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="v15-sport.html">
-                    <span class="b-img"><img src="./img/v15-sport-1.webp" alt="V15 Sport" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V15 Sport</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="x50-action.html">
-                    <span class="b-img"><img src="./img/x50-action-1.webp" alt="X50 Pro Action" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">X50 Pro Action</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-x1.html">
-                    <span class="b-img"><img src="./img/scooter-x1-1.webp" alt="Scooter X1" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X1</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-n5.html">
-                    <span class="b-img"><img src="./img/scooter-n5-1.webp" alt="Scooter N5" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N5</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="d50-cross.html">
-                    <span class="b-selo">Novo</span>
-                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="Bike elétrica D50 Cross" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">D50 Cross</span>
-                        <span class="b-sub">1000 W · até 60 km · alarme</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v35.html"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v35.html">V35</a>
-                        <span class="b-sub">1000 W · suspensão reforçada</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V35%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v40.html">
-                    
-                    <span class="b-img"><img src="./img/v40-1.webp" alt="Bike elétrica V40 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V40 Pro</span>
-                        <span class="b-sub">1000 W · bateria de alta capacidade</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v9-max.html"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v9-max.html">V9 Max</a>
-                        <span class="b-sub">1000 W · pneus largos</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V9%20Max%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v20-mini.html">
-                    
-                    <span class="b-img"><img src="./img/v20-mini-1.webp" alt="Bike elétrica V20 Mini" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V20 Mini</span>
-                        <span class="b-sub">750 W · quadro compacto</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="x30.html"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="x30.html">X30</a>
-                        <span class="b-sub">1000 W · rodas largas</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20X30%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-social-links">
-                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>href="v8-pro-s.html">
-                    <span class="b-img"><img src="./img/v8-pro-s-1.webp" alt="V8 Pro S" loading="lazy" width="400" height="400"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V8 Pro S</span>
-                        <span class="b-sub">Consulte a ficha técnica</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-s20-pro.html">
-                    <span class="b-img"><img src="./img/scooter-s20-pro-1.webp" alt="Scooter S20 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter S20 Pro</span>
-                        <span class="b-sub">1000 W · até 90 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n77.html">
-                    <span class="b-img"><img src="./img/scooter-n77-1.webp" alt="Scooter N77" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N77</span>
-                        <span class="b-sub">800 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-x18-plus.html">
-                    <span class="b-img"><img src="./img/scooter-x18-plus-2.webp" alt="Scooter X18 Plus" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X18 Plus</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="scooter-n7.html">
-                    <span class="b-img"><img src="./img/scooter-n7-1.webp" alt="Scooter N7" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N7</span>
-                        <span class="b-sub">1000 W · até 60 km</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="triciclo-eletrico.html">
-                    <span class="b-img"><img src="./img/triciclo-eletrico-1.webp" alt="Triciclo Elétrico" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Triciclo Elétrico</span>
-                        <span class="b-sub">3 lugares · até 200 kg</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="v15-sport.html">
-                    <span class="b-img"><img src="./img/v15-sport-1.webp" alt="V15 Sport" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V15 Sport</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-
-                <a class="b-card" href="x50-action.html">
-                    <span class="b-img"><img src="./img/x50-action-1.webp" alt="X50 Pro Action" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">X50 Pro Action</span>
-                        <span class="b-sub">1000 W · até 70 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-x1.html">
-                    <span class="b-img"><img src="./img/scooter-x1-1.webp" alt="Scooter X1" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter X1</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="scooter-n5.html">
-                    <span class="b-img"><img src="./img/scooter-n5-1.webp" alt="Scooter N5" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">Scooter N5</span>
-                        <span class="b-sub">1000 W · até 50 km · 2 lugares</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <a class="b-card" href="d50-cross.html">
-                    <span class="b-selo">Novo</span>
-                    <span class="b-img"><img src="./img/d50-cross-1.webp" alt="Bike elétrica D50 Cross" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">D50 Cross</span>
-                        <span class="b-sub">1000 W · até 60 km · alarme</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v35.html"><img src="./img/v35.webp" alt="Bike elétrica V35" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v35.html">V35</a>
-                        <span class="b-sub">1000 W · suspensão reforçada</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V35%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v40.html">
-                    
-                    <span class="b-img"><img src="./img/v40-1.webp" alt="Bike elétrica V40 Pro" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V40 Pro</span>
-                        <span class="b-sub">1000 W · bateria de alta capacidade</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="v9-max.html"><img src="./img/v9max.webp" alt="Bike elétrica V9 Max" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="v9-max.html">V9 Max</a>
-                        <span class="b-sub">1000 W · pneus largos</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20V9%20Max%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-                <a class="b-card" href="v20-mini.html">
-                    
-                    <span class="b-img"><img src="./img/v20-mini-1.webp" alt="Bike elétrica V20 Mini" loading="lazy"></span>
-                    <span class="b-body">
-                        <span class="b-nome">V20 Mini</span>
-                        <span class="b-sub">750 W · quadro compacto</span>
-                        <span class="b-link">Ver detalhes</span>
-                    </span>
-                </a>
-                <div class="b-card is-esgotado">
-                    <span class="b-selo b-selo--out">Esgotado</span>
-                    <a class="b-img" href="x30.html"><img src="./img/x30inow.webp" alt="Bike elétrica X30" loading="lazy"></a>
-                    <div class="b-body">
-                        <a class="b-nome" href="x30.html">X30</a>
-                        <span class="b-sub">1000 W · rodas largas</span>
-                        <a class="b-link b-link--estoque" href="https://wa.me/5548984023936?text=Ol%C3%A1!%20Queria%20ser%20avisado%20quando%20a%20X30%20voltar%20ao%20estoque." target="_blank" rel="noopener noreferrer">Pedir reposição</a>
-                    </div>
-                </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-social-links">
-                <a href="https://www.tiktok.com/@stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://www.instagram.com/stevemobile_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Steve Jobs Imports — Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
